@@ -1,14 +1,18 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap');
 /* font-family: 'Playfair Display', serif;
 font-family: 'Poppins', sans-serif; */
 #slider{
-    background-image: url(../img/main/mainback.png);
+    background-image: url(../img/main/main.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
     width: 100%;
     height: 800px;
     background-attachment: fixed;
     display: flex;
     align-items: center;
+
 }
 #wrap{
     width: 100%;
@@ -33,7 +37,6 @@ nav>ul{
 nav>ul>li>a{
     padding: 15px;
     color: #333;
-    font-weight: bold;
 
 }
 #content{
@@ -46,7 +49,6 @@ nav>ul>li>a{
 }
 #content_text{
     width: 600px;
-    background-color: red;
 }
 #content_text>h1{
     font-family: 'Playfair Display', serif;
@@ -55,12 +57,29 @@ nav>ul>li>a{
 }
 #content_form{
     width: 350px;
+    text-align: center;
 }
 #content_form>form{
     width: 100%;
     height: 400px;
     background-color: #fff;
     border-radius: 10px;
+
+}
+#content_form>form input,#content_form>form select{
+    font-family: 'Poppins', sans-serif;
+}
+#content_form>form input:first-of-type{
+    width: 306px;
+    
+
+}
+#content_form>form input:not(:first-of-type),
+#content_form>form select{
+    width: 150px;
+}
+#content_form>form input[type='submit']{
+    width: 306px;
 }
 #space{
     width: 1100px;
@@ -83,5 +102,35 @@ nav>ul>li>a{
 #room>div{
     width: 50%;
     height: 400px;
-    background-color: pink;
+    display: flex;
+}
+#room>div img{
+    width: 50%;
+}
+#room>div p{
+    width: 50%;
+    position: relative;
+    transition: all 0.5s ease;
+
+}
+#room>div p::after{
+    content: "";
+    width: 0;
+    height: 0;
+    border-right: 20px solid #fff;
+    border-bottom:15px solid transparent ;
+    border-top:15px solid transparent ;
+    border-left:0px solid transparent ;
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%);
+    transition: all 0.5s ease;
+
+}
+#room>div p:hover{
+    background-color: aqua;
+}
+#room>div p:hover::after{
+    border-right: 20px solid aqua;
 }
