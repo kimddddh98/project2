@@ -19,7 +19,7 @@ font-family: 'Poppins', sans-serif; */
     margin: 0 auto;
 }
 header{
-    width: 1200px;
+    width: 1100px;
     height:90px ;
     margin: 0 auto;
     background-color: #fff;
@@ -39,6 +39,7 @@ nav>ul{
     position: relative;
 
 }
+
 .under::after{
     content: "";
     display: block;
@@ -56,8 +57,13 @@ nav>ul{
     width: 100%;
     left:0%;
     transition: all 0.5s ease;
-
-
+}
+#under_home{
+    color: #fad091;
+}
+#under_home::after{
+    width: 100%;
+    left: 0%;
 }
 #content{
     width: 1100px;
@@ -75,33 +81,39 @@ nav>ul{
     color: #fff;
     opacity: 0.9;
 }
-#content_text button{
+#content_text .button{
     width: 130px;
-    padding: 11px 0;
+    display: inline-block;
+    padding: 8px 0;
     border-radius: 4px;
     border: none;
     font-family: 'Poppins', sans-serif;
+    text-align: center;
 
 }
-#content_text button:first-of-type{
+#content_text .button:first-of-type{
     background-color: #fad091;
     color: #fff;
 }
-#content_text button:nth-of-type(2){
+#content_text .button:nth-of-type(2){
     background-color: #fff;
 }
 #content_form{
     width: 350px;
+    background-color: #fff;
+    border-radius: 10px;
+
+
 }
 #content_form>form{
     width: 100%;
     height: 400px;
-    background-color: #fff;
-    border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
-    align-content: space-around;
     justify-content: space-around;
+    align-content: space-around;
+    margin: 0 0 0 6px;
+
 
 }
 #content_form>form input,#content_form>form select{
@@ -134,11 +146,17 @@ nav>ul{
     border: none;
     border-radius: 5px;
     color: #fff;
+    padding: 0 0 0 0px;
+    margin-left: -15px;
+
 
 }
 #content_form>form h3{
     width: 320px;
     height: 40px;
+    font-family:'Playfair Display', serif;
+    font-weight: 100;
+    font-size: 25px;
 }
 #price{
     width: 1100px;
@@ -178,11 +196,11 @@ nav>ul{
 #room>div p{
     width: 50%;
     position: relative;
-    transition: all 0.5s ease;
+    transition: all 0.4s ease-out;
     background-color: #fff;
 
 }
-#room>div p::after{
+.first::after{
     content: "";
     width: 0;
     height: 0;
@@ -194,15 +212,33 @@ nav>ul{
     top: 50%;
     left: -20px;
     transform: translateY(-50%);
-    transition: all 0.5s ease;
+    transition: all 0.4s ease-out;
+
+}
+.second::after{
+    content: "";
+    width: 0;
+    height: 0;
+    border-right: 0px solid transparent;
+    border-bottom:15px solid transparent ;
+    border-top:15px solid transparent ;
+    border-left:20px solid  #fff;
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+    transition: all 0.4s ease-in-out;
 
 }
 #room>div p:hover{
     background-color: #fad091;
     color: #fff;
 }
-#room>div p:hover::after{
+.first:hover::after{
     border-right: 20px solid #fad091;
+}
+.second:hover::after{
+    border-left: 20px solid #fad091;
 }
 .bgbox{
     background-color: #f3f4f7;

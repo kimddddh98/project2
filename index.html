@@ -16,7 +16,7 @@
             <div id="logo">Dogroom</div>
             <nav>
                 <ul>
-                    <li><a href="#" class="under">Home</a></li>
+                    <li><a href="#" class="under" id="under_home">Home</a></li>
                     <li><a href="#" class="under">About</a></li>
                     <li><a href="#" class="under">Services</a></li>
                     <li><a href="#" class="under">Apartment Room</a></li>
@@ -31,15 +31,15 @@
                     <h1>
                     content_text
                     </h1>
-                    <button>btn</button>
-                    <button>btn</button>
+                    <a href="#" class="button">btn</a>
+                    <a href="#" class="button">btn</a>
                 </div>
                 <div id="content_form">
                     <form action="#">
-                        <h3>aaa</h3>
+                        <h3>Reservation</h3>
                         <input type="text" placeholder="Full Name" name="re"><br>
-                        <input type="date" name="re" id="">
-                        <input type="date" name="re" id=""><br>
+                        <input type="text" name="re" id="" onfocus="(this.type='date')" placeholder="Check-In">
+                        <input type="text" name="re" id="" onfocus="(this.type='date')" placeholder="Check-Out"><br>
                         <select name="re">
                             <option value="소형견">소형견</option>
                             <option value="중형견">중형견</option>
@@ -67,20 +67,22 @@
         <div id="room">
             <h2>Room</h2>
             <div>
-                <img src="img/main/room2.jpg" alt="">
-                <p>asd</p>
+                <img src="img/main/room_1.jpg" alt="">
+                <p class="first">\f005</p>
             </div>
             <div>
                 <img src="img/main/room2.jpg" alt="">
-                <p>asd</p>
+                <p class="first">asd</p>
             </div>
             <div>
-                <img src="img/main/room2.jpg" alt="">
-                <p>asd</p>
+                <p class="second">asd</p>
+
+                <img src="img/main/room3.jpg" alt="">
             </div>
             <div>
+                <p class="second">asd</p>
+
                 <img src="img/main/room4.jpg" alt="">
-                <p>asd</p>
             </div>
         </div>
  
@@ -98,7 +100,8 @@
                     <p>asdasd</p>
                 </div>
                 <div>
-                    <h2>asdasd</h2>
+                    <h2>
+                        Check-List</h2>
                     <p>asdasd</p>
                 </div>
             </div>
