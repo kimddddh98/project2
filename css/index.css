@@ -1,7 +1,9 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
 /* font-family: 'Playfair Display', serif;
 font-family: 'Poppins', sans-serif; */
+/* font-family: 'Nanum Gothic Coding', monospace; */
 #slider{
     background-image: url(../img/main/main.jpg);
     background-repeat: no-repeat;
@@ -136,8 +138,12 @@ nav>ul{
     border: none;
     background-color: #f3f4f7;
     padding: 0 0 0 10px;
+    font-weight: 100;
 
 
+}
+#content_form>form select{
+    font-family: 'Nanum Gothic Coding', monospace; 
 }
 #content_form>form input[type='submit']{
     width: 320px;
