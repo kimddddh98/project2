@@ -12,7 +12,6 @@ font-family: 'Poppins', sans-serif; */
     background-attachment: fixed;
     display: flex;
     align-items: center;
-
 }
 #wrap{
     width: 100%;
@@ -29,7 +28,6 @@ header{
     justify-content: space-between;
     font-family: 'Poppins', sans-serif;
     color: #000;
-
 }
 nav>ul{
     display: flex;
