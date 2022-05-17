@@ -34,6 +34,7 @@ header{
 nav>ul{
     display: flex;
 }
+
 .under{
     padding: 33px 15px;
     color: #333;
