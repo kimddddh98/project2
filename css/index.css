@@ -194,11 +194,19 @@ nav>ul{
     display: flex;
     flex-direction: column;
     border: 1px solid black;
+    overflow: hidden;
+    align-items: center;
+    justify-content: space-around;
+    
 }
-#pirce>div img{
+#price img{
     width: 100%;
+    height: 100%;
 }
-
+#small>div,#mid>div,#large>div{
+    width: 90%;
+    height: 50%;
+}
 /* #small{
     background-image: url(../img/main/price1.jpg);
     background-repeat: no-repeat;
