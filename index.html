@@ -8,19 +8,62 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/reset.css">
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(function(){
+        $(window).scroll(function(){
+        var video=document.getElementsByTagName("header")[0].clientHeight;
+        var height=video;
+        var scroll=$(window).scrollTop();
+        if(scroll>3700){
+            $('footer').css('transform','translate(0, 0px)')
+        }
+        else if(scroll>3200){
+            $('.bgbox_three').css('transform','translate(0, 0px)')
+        }
+        else if(scroll>2800){
+            $('#bgimg>div').css('transform','translate(0, 0px)')
+        }
+        else if(scroll>1800){
+            $('.bgbox_two').css('transform','translate(0, 0px)')
+        }
+        else if(scroll>1400){
+            $('.bgbox_one').css('transform','translate(0, 0px)')
+        }
+        else if(scroll>750){
+            $('.room_left').css('transform','translate(0, 0px)')
+        }
+        else if(scroll>650){
+            $('.room_right').css('transform','translate(0, 0px)')
+        }
+        else if(scroll>550){
+            $('#room').css('transform','translate(0, 0px)')
+        }   
+        else if(scroll>1){
+            $('#content_text').css('transform','translate(0, 0px)')
+        }
+    })
+    $(document).ready(function(){
+        $('#content_text').css('transform','translate(0, 0px)')
+
+    });
+})
+
+    </script>
 </head>
 <body>
     
     <div id="wrap">
         <header>
-            <div id="logo">Dogroom</div>
+            <div id="logo"><img src="img/main/logo.png" alt=""></div>
             <nav>
                 <ul>
                     <li><a href="#" class="under" id="under_home">Home</a></li>
                     <li><a href="#" class="under">About</a></li>
                     <li><a href="#" class="under">Services</a></li>
-                    <li><a href="#" class="under">Apartment Room</a></li>
-                    <li><a href="#" class="under">Blog</a></li>
+                    <li><a href="#" class="under">Room Detail</a></li>
+                    <li><a href="#" class="under">News</a></li>
                     <li><a href="#" class="under">Contact</a></li>
                 </ul>
             </nav>
@@ -39,11 +82,14 @@
                         <input type="text" name="re" id="" onfocus="(this.type='date')" placeholder="Check-In">
                         <input type="text" name="re" id="" onfocus="(this.type='date')" placeholder="Check-Out"><br>
                         <select name="re" >
+                            <option value="" disabled selected>Dog-type</option>
                             <option value="소형견">소형견</option>
                             <option value="중형견">중형견</option>
                             <option value="대형견">대형견</option>
                         </select>
                         <select name="re">
+                            <option value=""  disabled selected >Room-type</option>
+
                             <option value="디럭스">디럭스</option>
                             <option value="슈페리어">슈페리어</option>
                             <option value="스위트">스위트</option>
@@ -63,9 +109,9 @@
                 </div>
                 <ul>
                     <li>소형견</li>
-                    <li>1박(24시간기준)</li>
-                    <li>30일 패키지</li>
-                    <li>예약하기</li>
+                    <li>1일(24시간기준)</li>
+                    <!-- <li>30일 패키지</li> -->
+                    <li><a href="">예약하기</a></li>
                 </ul>
             </div>
             <div id="mid">
@@ -74,9 +120,9 @@
                 </div>
                 <ul>
                     <li>중형견</li>
-                    <li>1박(24시간기준)</li>
+                    <li>1일(24시간기준)</li>
                     <li>30일 패키지</li>
-                    <li>예약하기</li>
+                    <li><a href="">예약하기</a></li>
                 </ul>
             </div>
             <div id="large">
@@ -85,16 +131,16 @@
                 </div>
                 <ul>
                     <li>대형견</li>
-                    <li>1박(24시간기준)</li>
+                    <li>1일(24시간기준)</li>
                     <li>30일 패키지</li>
-                    <li>예약하기</li>
+                    <li><a href="">예약하기</a></li>
                 </ul>
             </div>
         </div>
 
         <div id="room">
             <h2>Room</h2>
-            <div>
+            <div class="room_right">
                 <img src="img/main/room_1.jpg" alt="">
                 <div class="first detail">
                     <p>Deluxe</p>    
@@ -104,7 +150,7 @@
                     <a href="#">View Room Details</a>
                 </div>
             </div>
-            <div>
+            <div class="room_right">
                 <img src="img/main/room2.jpg" alt="">
                 <div class="first detail">
                     <p>Superior</p>
@@ -114,7 +160,7 @@
 
                 </div>
             </div>
-            <div>
+            <div class="room_left">
                 <div class="second detail">
                     <p>Suite</p>
                     <p>중/대형견 전용</p>
@@ -126,7 +172,7 @@
 
                 <img src="img/main/room3.jpg" alt="">
             </div>
-            <div>
+            <div class="room_left">
                 <div class="second detail">
                     <p>Royal-Suite</p>
                     <p>대/중/소형견 전용</p>
@@ -140,7 +186,7 @@
             </div>
         </div>
  
-        <div class="bgbox">
+        <div class="bgbox bgbox_one">
             <h2>Space</h2>
             <div id="space">
                 <div>
@@ -162,6 +208,9 @@
                     <p>드라이룸</p>
                 </div>
             </div>
+        </div>
+
+        <div class="bgbox bgbox_two">
         
             <div id="con">
                 <div>
@@ -277,7 +326,7 @@
                 </div>
             </div>
         
-        <div class="bgbox">
+        <div class="bgbox bgbox_three">
             <h2>News</h2>
             <div id="news">
                 <div></div>
@@ -322,7 +371,7 @@
                         </div>
                     <h3>Follow us</h3>
                         <div class="row">
-                            <a href="" class="sns"></a>
+                            <a href="" class="sns"> </a>
                             <a href="" class="sns"></a>
                             <a href="" class="sns"></a>
                         </div>
@@ -330,5 +379,12 @@
             </div>
         </footer>
     </div>
+    <!-- <script>
+
+        const onemargin=300;
+        const ele=document.querySelectorall('.detail');
+         
+    
+    </script> -->
 </body>
 </html>
