@@ -31,7 +31,7 @@
         else if(scroll>1400){
             $('.bgbox_one').css('transform','translate(0, 0px)')
         }
-        else if(scroll>750){
+        else if(scroll>950){
             $('.room_left').css('transform','translate(0, 0px)')
         }
         else if(scroll>650){
@@ -41,12 +41,13 @@
             $('#room').css('transform','translate(0, 0px)')
         }   
         else if(scroll>1){
-            $('#content_text').css('transform','translate(0, 0px)')
+            $('#price').css('opacity','1');
+        $('#price').css('margin','-100px auto');
         }
     })
     $(document).ready(function(){
         $('#content_text').css('transform','translate(0, 0px)')
-
+      
     });
 })
 
@@ -77,10 +78,10 @@
                 </div>
                 <div id="content_form">
                     <form action="#">
-                        <h3>Book your hotel</h3>
-                        <input type="text" placeholder="Full Name" name="re"><br>
+                        <h3>Book your Hotel</h3>
+                        <input type="text" placeholder="Full Name" name="re">
                         <input type="text" name="re" id="" onfocus="(this.type='date')" placeholder="Check-In">
-                        <input type="text" name="re" id="" onfocus="(this.type='date')" placeholder="Check-Out"><br>
+                        <input type="text" name="re" id="" onfocus="(this.type='date')" placeholder="Check-Out">
                         <select name="re" >
                             <option value="" disabled selected>Dog-type</option>
                             <option value="소형견">소형견</option>
@@ -94,9 +95,11 @@
                             <option value="슈페리어">슈페리어</option>
                             <option value="스위트">스위트</option>
                             <option value="로얄스위트">로얄스위트</option>
-                        </select><br>
+                        </select>
                         <input type="tel" placeholder="Phone Number">
-                        <input type="time" name="re"  value="08:00:00" min="08:00:00" max="20:00:00"><br>
+                        <input type="text" name="re" id="" onfocus="(this.type='time')"  placeholder="Time">
+
+                        <!-- <input type="time" name="re"  value="08:00:00" min="08:00:00" max="20:00:00"><br> -->
                         <input type="submit" value="예약하기">
                     </form>
                 </div>
@@ -107,33 +110,37 @@
                 <div>
                 <img src="img/main/small.jpg" alt="">
                 </div>
+                    <h4>Dogroom 30일 패키지</h4>
                 <ul>
-                    <li>소형견</li>
-                    <li>1일(24시간기준)</li>
-                    <!-- <li>30일 패키지</li> -->
-                    <li><a href="">예약하기</a></li>
+                    <li>(소형견)</li>
+                    <li>10kg 미만</li>
+                    <li>말티즈,요크셔테리어,치와와,포메라니안 등</li>
+                    <li><a href="#">예약하기</a></li>
                 </ul>
             </div>
             <div id="mid">
                 <div>
                     <img src="img/main/mid.png" alt="">
                 </div>
+                <h4>Dogroom 30일 패키지</h4>
                 <ul>
-                    <li>중형견</li>
-                    <li>1일(24시간기준)</li>
-                    <li>30일 패키지</li>
-                    <li><a href="">예약하기</a></li>
+                    <li>(중형견)</li>
+                    <li>20kg 미만</li>
+
+                    <li>웰시코기,스피츠,비글,닥스훈트 등</li>
+                    <li><a href="#">예약하기</a></li>
                 </ul>
             </div>
             <div id="large">
                 <div>
                     <img src="img/main/big.png" alt="">
                 </div>
+                <h4>Dogroom 30일 패키지</h4>
                 <ul>
-                    <li>대형견</li>
-                    <li>1일(24시간기준)</li>
-                    <li>30일 패키지</li>
-                    <li><a href="">예약하기</a></li>
+                    <li>(대형견)</li>
+                    <li>20kg 이상</li>
+                    <li>골든 리트리버,사모예드,셰퍼드,도베르만 등</li>
+                    <li><a href="#">예약하기</a></li>
                 </ul>
             </div>
         </div>
@@ -329,17 +336,45 @@
         <div class="bgbox bgbox_three">
             <h2>News</h2>
             <div id="news">
-                <div></div>
-                <div></div>
-                <div></div>
+                <div>
+                    <div id="newsImg"></div>
+                    <div id="newsDate"></div>
+                    <div id="newsText">
+                        <a href="#">Read more</a>
+                    </div>
+
+                </div>
+                <div>
+                    <div id="newsImg"></div>
+                    <div id="newsDate"></div>
+                    <div id="newsText">
+                        <a href="#">Read more</a>
+
+                    </div>
+                </div>
+                <div>
+                    <div id="newsImg"></div>
+                    <div id="newsDate"></div>
+                    <div id="newsText">
+                        <a href="#">Read more</a>
+                    </div>
+                </div>
             </div>
         </div>
         <footer>
             <div id="foot">
                 <div>
+                    <div id="footlogo">
+                    </div>
+                    
+
                     <ul>
-                        <li></li>
-                        <li></li>
+                        <li>주소 : 경기도 안산시 단원구 고잔2길 코스모프라자 6층</li>
+                        <li>Tel : 010-1234-5768</li>
+                        <li>Fax : 031-123-4567</li>
+                        <li>
+                            Copyright ©2022 All rights reserved | This template is made with  by Dogroom
+                            </li>
                     </ul>
                 </div>
                 <div>
@@ -353,13 +388,14 @@
                     </ul>
                 </div>
                 <div>
-                    <h3>Services</h3>
+                    <h3>Menu</h3>
                     <ul>
-                        <li>Dogroom 소개</li>
-                        <li>서비스 이용약관</li>
-                        <li>개인정보취급방침</li>
-                        <li>이메일 무단수집거부</li>
-                        <li>공지사항</li>
+                        <li><a href="#" >Home</a></li>
+                        <li><a href="#" >About</a></li>
+                        <li><a href="#" >Services</a></li>
+                        <li><a href="#" >Room Detail</a></li>
+                        <li><a href="#" >News</a></li>
+                        <li><a href="#" >Contact</a></li>
                     </ul>
                 </div>
                 <div >
@@ -369,7 +405,7 @@
                             <!-- <input type="submit"> --> 
                             <button type="submit"></button>
                         </div>
-                    <h3>Follow us</h3>
+                    <h3 id="follow">Follow us</h3>
                         <div class="row">
                             <a href="" class="sns"> </a>
                             <a href="" class="sns"></a>
