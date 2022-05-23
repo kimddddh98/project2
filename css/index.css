@@ -763,11 +763,9 @@ footer{
 }
 #foot .sns:nth-of-type(2){
     background-image: url(../img/main/facebook.png);
-
 }
 #foot .sns:nth-of-type(3){
     background-image: url(../img/main/insta.png);
-
 }
 #room {
     /* height: 0; */
