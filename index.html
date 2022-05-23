@@ -13,43 +13,70 @@
     <script>
         $(function(){
         $(window).scroll(function(){
-        var video=document.getElementsByTagName("header")[0].clientHeight;
-        var height=video;
+        const slider=document.getElementById('slider').scrollHeight;
+        const room=document.getElementById('room').scrollHeight;
+        const bgone=document.getElementsByClassName('bgbox_one')[0].scrollHeight;
+        const bgtwo=document.getElementsByClassName('bgbox_two')[0].scrollHeight;
+        const bgtxt=document.getElementById('bgtxt').scrollHeight;
+        const bgthree=document.getElementsByClassName('bgbox_three')[0].scrollHeight;
+        
+        const height=document.getElementById('wrap').scrollHeight
         var scroll=$(window).scrollTop();
-        if(scroll>3700){
-            $('footer').css('transform','translate(0, 0px)')
-        }
-        else if(scroll>3200){
-            $('.bgbox_three').css('transform','translate(0, 0px)')
-        }
-        else if(scroll>2800){
-            $('#bgimg>div').css('transform','translate(0, 0px)')
-        }
-        else if(scroll>1800){
-            $('.bgbox_two').css('transform','translate(0, 0px)')
-        }
-        else if(scroll>1400){
-            $('.bgbox_one').css('transform','translate(0, 0px)')
-        }
-        else if(scroll>950){
+       if(slider+room+bgone+bgtwo+bgtxt<scroll){
+                $('.bgbox_three').css('transform','translate(0, 0px)')
+                $('#bgimg>div').css('transform','translate(0, 0px)')
+                $('.bgbox_two').css('transform','translate(0, 0px)')
+                $('.bgbox_one').css('transform','translate(0, 0px)')
+                $('.room_right').css('transform','translate(0, 0px)')
             $('.room_left').css('transform','translate(0, 0px)')
-        }
-        else if(scroll>650){
-            $('.room_right').css('transform','translate(0, 0px)')
-        }
-        else if(scroll>550){
             $('#room').css('transform','translate(0, 0px)')
-        }   
-        else if(scroll>1){
             $('#price').css('opacity','1');
-        $('#price').css('margin','-100px auto');
-        }
-    })
+            $('#price').css('margin','-100px auto');
+            }
+            else if(slider+room+bgone+bgtwo<scroll){
+                $('#bgimg>div').css('transform','translate(0, 0px)')
+                $('.bgbox_two').css('transform','translate(0, 0px)')
+                $('.bgbox_one').css('transform','translate(0, 0px)')
+                $('.room_right').css('transform','translate(0, 0px)')
+            $('.room_left').css('transform','translate(0, 0px)')
+            $('#room').css('transform','translate(0, 0px)')
+            $('#price').css('opacity','1');
+            $('#price').css('margin','-100px auto');
+            }
+            else if(slider+room+bgone<scroll){
+                $('.bgbox_two').css('transform','translate(0, 0px)')
+                $('.bgbox_one').css('transform','translate(0, 0px)')
+                $('.room_right').css('transform','translate(0, 0px)')
+            $('.room_left').css('transform','translate(0, 0px)')
+            $('#room').css('transform','translate(0, 0px)')
+            $('#price').css('opacity','1');
+            $('#price').css('margin','-100px auto');
+            }
+            else if(slider+room<scroll){
+                $('.bgbox_one').css('transform','translate(0, 0px)')
+                $('.room_right').css('transform','translate(0, 0px)')
+            $('.room_left').css('transform','translate(0, 0px)')
+            $('#room').css('transform','translate(0, 0px)')
+            $('#price').css('opacity','1');
+            $('#price').css('margin','-100px auto');
+            }
+            else if(slider<scroll){
+            $('.room_right').css('transform','translate(0, 0px)')
+            $('.room_left').css('transform','translate(0, 0px)')
+            $('#room').css('transform','translate(0, 0px)')
+            $('#price').css('opacity','1');
+            $('#price').css('margin','-100px auto');
+            }
+            else if(scroll>1){
+            $('#price').css('opacity','1');
+            $('#price').css('margin','-100px auto');
+            }
+    });
     $(document).ready(function(){
         $('#content_text').css('transform','translate(0, 0px)')
       
     });
-})
+});
 
     </script>
 </head>
@@ -324,7 +351,7 @@
         </div>
 
             <div id="bgimg">
-                <div>
+                <div id="bgtxt">
                     <h2>Hotel reservations <br>for your dogs</h2>
                     <div id="btnbox">
                         <a href="#">BOOK NOW</a>
@@ -415,12 +442,9 @@
             </div>
         </footer>
     </div>
-    <!-- <script>
-
+     <script>
         const onemargin=300;
-        const ele=document.querySelectorall('.detail');
-         
-    
-    </script> -->
+        const ele=document.getElementById('price');
+    </script>
 </body>
 </html>
