@@ -467,7 +467,7 @@ select option[value=""][disabled]{
     position: absolute;
     bottom: 60px;
 }
-#dot>span{
+#dot .init{
     display: inline-block;
     background-color: #fad091;
     width: 18px;

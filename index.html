@@ -74,7 +74,7 @@
     });
     $(document).ready(function(){
         $('#content_text').css('transform','translate(0, 0px)')
-      
+        // $('#dot1').css('background','#666')
     });
 });
 
@@ -307,7 +307,9 @@
             const dot2=document.getElementById('dot2');        
             const dot3=document.getElementById('dot3');        
             const dot4=document.getElementById('dot4');    
-            
+            window.onload=function(){
+                dot1.style.backgroundColor='#666'
+            }
             dot1.addEventListener('click',function(){
                 sAlbum.style.left=0+'px'
                 
