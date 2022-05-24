@@ -76,7 +76,6 @@
         $('#content_text').css('transform','translate(0, 0px)')
       
     });
-
 });
 
     </script>
@@ -223,8 +222,6 @@
  
         <div class="bgbox bgbox_one">
             <h2>Space</h2>
-            <button class="next">앞</button>
-            <button class="prev">뒤</button>
             <div id="space">
                 <div id="album">
                 <div class="sli">
@@ -253,12 +250,33 @@
                 </div>
                 <div class="sli">
                     <div class="space_img">
+                        <img src="img/main/space2.png" alt="">
+                    </div>
+                    <p>대형견 실내놀이터</p>
+                </div>
+                <div class="sli">
+                    <div class="space_img">
+                        <img src="img/main/space1.png" alt="">
+                    </div>
+                    <p>소형견 실내놀이터</p>
+                </div>
+                <div class="sli">
+                    <div class="space_img">
                         <img src="img/main/space3.png" alt="">
                     </div>
                     <p>드라이룸</p>
                 </div>
                 </div>
+               
+                <div id="dot">
+                    <span id="dot1" class="init"></span>
+                    <span id="dot2" class="init"></span>
+                    <span id="dot3" class="init"></span>
+                    <span id="dot4" class="init"></span>
+                    <span id="dot5" class="init"></span>
+                </div>
             </div>
+          
         </div>
         <script>
             const sSpace=document.getElementById('space');
@@ -271,25 +289,55 @@
             const prev=document.querySelector('.prev');
             sAlbum.style.width=sWidth*sConunt+'px';
              
-            function move(num){
-                sAlbum.style.left=-num*370+'px';
-                index=num;
-            }
-            prev.addEventListener('click',function(){
-                if(index!==0)move(index-1);
-            })
-            var pp=next.addEventListener('click',function(){
-                if(index!==sConunt-1){
-                    move(index+1);
-                }
-            })
-            // sAlbum.addEventListener('mouseup',function(){
-            //     if(index!==sConunt-1){
+          
+            // function move(num){
+            //     sAlbum.style.left=-num*sWidth+'px';
+            //     index=num;
+            // }
+            // prev.addEventListener('click',function(){
+            //     if(index!==0)move(index-1);
+            // })
+            // next.addEventListener('click',function(){
+            //     if(index!==sConunt-3){
             //         move(index+1);
             //     }
             // })
-        
+
+            const dot1=document.getElementById('dot1');        
+            const dot2=document.getElementById('dot2');        
+            const dot3=document.getElementById('dot3');        
+            const dot4=document.getElementById('dot4');    
             
+            dot1.addEventListener('click',function(){
+                sAlbum.style.left=0+'px'
+                
+            })
+            dot2.addEventListener('click',function(){
+                sAlbum.style.left=-sWidth+'px'
+
+            })
+            dot3.addEventListener('click',function(){
+                sAlbum.style.left=-sWidth*2+'px'
+            })
+            dot4.addEventListener('click',function(){
+                sAlbum.style.left=-sWidth*3+'px'
+            })
+            dot5.addEventListener('click',function(){
+                sAlbum.style.left=-sWidth*4+'px'
+            })
+        
+          
+            var init=document.getElementsByClassName('init');
+            for(var i=0;i<init.length;i++){
+                init[i].addEventListener('click',function(){
+                    for(var j=0;j<init.length;j++){
+                        init[j].style.backgroundColor='#fad091';
+                    }
+                    this.style.backgroundColor='#666';
+                })
+            }
+
+          
         </script>
         <div class="bgbox bgbox_two">
         
