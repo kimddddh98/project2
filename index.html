@@ -76,6 +76,7 @@
         $('#content_text').css('transform','translate(0, 0px)')
       
     });
+
 });
 
     </script>
@@ -222,28 +223,74 @@
  
         <div class="bgbox bgbox_one">
             <h2>Space</h2>
+            <button class="next">앞</button>
+            <button class="prev">뒤</button>
             <div id="space">
-                <div>
+                <div id="album">
+                <div class="sli">
                     <div class="space_img">
                         <img src="img/main/space1.png" alt="">
                     </div>
                     <p>소형견 실내놀이터</p>
                 </div>
-                <div>
+                <div class="sli">
                     <div class="space_img">
                         <img src="img/main/space2.png" alt="">
                     </div>
                     <p>대형견 실내놀이터</p>
                 </div>
-                <div>
+                <div class="sli">
                     <div class="space_img">
                         <img src="img/main/space3.png" alt="">
                     </div>
                     <p>드라이룸</p>
                 </div>
+                <div class="sli">
+                    <div class="space_img">
+                        <img src="img/main/space3.png" alt="">
+                    </div>
+                    <p>드라이룸</p>
+                </div>
+                <div class="sli">
+                    <div class="space_img">
+                        <img src="img/main/space3.png" alt="">
+                    </div>
+                    <p>드라이룸</p>
+                </div>
+                </div>
             </div>
         </div>
-
+        <script>
+            const sSpace=document.getElementById('space');
+            const sAlbum=document.getElementById('album');
+            const sWidth=370;
+            const sImg=document.querySelectorAll('.sli');
+            const sConunt=sImg.length;
+            let index=0;
+            const next=document.querySelector('.next');
+            const prev=document.querySelector('.prev');
+            sAlbum.style.width=sWidth*sConunt+'px';
+             
+            function move(num){
+                sAlbum.style.left=-num*370+'px';
+                index=num;
+            }
+            prev.addEventListener('click',function(){
+                if(index!==0)move(index-1);
+            })
+            var pp=next.addEventListener('click',function(){
+                if(index!==sConunt-1){
+                    move(index+1);
+                }
+            })
+            sAlbum.addEventListener('mouseup',function(){
+                if(index!==sConunt-1){
+                    move(index+1);
+                }
+            })
+        
+            
+        </script>
         <div class="bgbox bgbox_two">
         
             <div id="con">
@@ -364,24 +411,51 @@
             <h2>News</h2>
             <div id="news">
                 <div>
-                    <div class="news_img"></div>
-                    <div class="news_date"></div>
+                    <div class="news_img">
+                        <img src="img/main/news1.jpg" alt="">
+                    </div>
+                    <div class="news_date">May 01 2022</div>
                     <div class="news_text">
+                        <p>
+                            'Dogroom' 애견호텔에서는 코로나19 예방을 위해 
+                            자체 소독과 애견유치원/호텔/미용/아카데미 모든
+                            시설의 청소를 매일 강도 높게 실시하고 있습니다.
+                        </p>
                         <a href="#">Read more</a>
                     </div>
 
                 </div>
                 <div>
-                    <div class="news_img"></div>
+                    <div class="news_img">
+                        <img src="img/main/news2.jpg" alt="">
+                    </div>
                     <div class="news_date"></div>
                     <div class="news_text">
+                       <p >
+                           'Dogroom' 애견호텔 체크인/아웃 시간 안내
+                            <span>
+                           08:00~20:00
+                            </span> 
+                            
+                       </p>
                         <a href="#">Read more</a>
                     </div>
                 </div>
                 <div>
-                    <div class="news_img"></div>
+                    <div class="news_img">
+                        <img src="img/main/news3.jpg" alt="">
+
+                    </div>
                     <div class="news_date"></div>
                     <div class="news_text">
+                        <p >
+                            'Dogroom' 애견호텔에서는 이용자의 편의를 위해
+                             픽업차량을 운영중입니다.
+                             <br>
+                             픽업차량 운영시간 : 
+                             <span>13:00~17:00</span>
+                            
+                        </p>
                         <a href="#">Read more</a>
                     </div>
                 </div>
