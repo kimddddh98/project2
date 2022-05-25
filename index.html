@@ -10,74 +10,7 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <script>
-        $(function(){
-        $(window).scroll(function(){
-        const slider=document.getElementById('slider').scrollHeight;
-        const room=document.getElementById('room').scrollHeight;
-        const bgone=document.getElementsByClassName('bgbox_one')[0].scrollHeight;
-        const bgtwo=document.getElementsByClassName('bgbox_two')[0].scrollHeight;
-        const bgtxt=document.getElementById('bgtxt').scrollHeight;
-        const bgthree=document.getElementsByClassName('bgbox_three')[0].scrollHeight;
-        
-        const height=document.getElementById('wrap').scrollHeight
-        var scroll=$(window).scrollTop();
-            if(slider+room+bgone+bgtwo+bgtxt<scroll){
-                $('.bgbox_three').css('transform','translate(0, 0px)')
-                $('#bgimg>div').css('transform','translate(0, 0px)')
-                $('.bgbox_two').css('transform','translate(0, 0px)')
-                $('.bgbox_one').css('transform','translate(0, 0px)')
-                $('.room_right').css('transform','translate(0, 0px)')
-            $('.room_left').css('transform','translate(0, 0px)')
-            $('#room').css('transform','translate(0, 0px)')
-            $('#price').css('opacity','1');
-            $('#price').css('margin','-100px auto');
-            }
-            else if(slider+room+bgone+bgtwo<scroll){
-                $('#bgimg>div').css('transform','translate(0, 0px)')
-                $('.bgbox_two').css('transform','translate(0, 0px)')
-                $('.bgbox_one').css('transform','translate(0, 0px)')
-                $('.room_right').css('transform','translate(0, 0px)')
-            $('.room_left').css('transform','translate(0, 0px)')
-            $('#room').css('transform','translate(0, 0px)')
-            $('#price').css('opacity','1');
-            $('#price').css('margin','-100px auto');
-            }
-            else if(slider+room+bgone<scroll){
-                $('.bgbox_two').css('transform','translate(0, 0px)')
-                $('.bgbox_one').css('transform','translate(0, 0px)')
-                $('.room_right').css('transform','translate(0, 0px)')
-            $('.room_left').css('transform','translate(0, 0px)')
-            $('#room').css('transform','translate(0, 0px)')
-            $('#price').css('opacity','1');
-            $('#price').css('margin','-100px auto');
-            }
-            else if(slider+room<scroll){
-                $('.bgbox_one').css('transform','translate(0, 0px)')
-                $('.room_right').css('transform','translate(0, 0px)')
-            $('.room_left').css('transform','translate(0, 0px)')
-            $('#room').css('transform','translate(0, 0px)')
-            $('#price').css('opacity','1');
-            $('#price').css('margin','-100px auto');
-            }
-            else if(slider<scroll){
-            $('.room_right').css('transform','translate(0, 0px)')
-            $('.room_left').css('transform','translate(0, 0px)')
-            $('#room').css('transform','translate(0, 0px)')
-            $('#price').css('opacity','1');
-            $('#price').css('margin','-100px auto');
-            }
-            else if(scroll>1){
-            $('#price').css('opacity','1');
-            $('#price').css('margin','-100px auto');
-            }
-    });
-    $(document).ready(function(){
-        $('#content_text').css('transform','translate(0, 0px)')
-        // $('#dot1').css('background','#666')
-    });
-});
-
+    <script src="js/index.js">
     </script>
 </head>
 <body>
@@ -94,7 +27,9 @@
                     <li><a href="#" class="under">News</a></li>
                     <li><a href="#" class="under">Contact</a></li>
                 </ul>
+                <div id="menu"><img src="img/main/menu.png" alt=""></div>
             </nav>
+           
         </header>
         <div id="slider">
             <div id="content">
@@ -244,27 +179,27 @@
                 </div>
                 <div class="sli">
                     <div class="space_img">
-                        <img src="img/main/space3.png" alt="">
+                        <img src="img/main/space4.png" alt="">
                     </div>
-                    <p>드라이룸</p>
+                    <p>볼풀</p>
                 </div>
                 <div class="sli">
                     <div class="space_img">
-                        <img src="img/main/space2.png" alt="">
+                        <img src="img/main/space5.png" alt="">
                     </div>
                     <p>대형견 실내놀이터</p>
                 </div>
                 <div class="sli">
                     <div class="space_img">
-                        <img src="img/main/space1.png" alt="">
+                        <img src="img/main/space6.jpg" alt="">
                     </div>
-                    <p>소형견 실내놀이터</p>
+                    <p>미용&스파</p>
                 </div>
                 <div class="sli">
                     <div class="space_img">
-                        <img src="img/main/space3.png" alt="">
+                        <img src="img/main/space7.png" alt="">
                     </div>
-                    <p>드라이룸</p>
+                    <p>1층,2층 연결 복도</p>
                 </div>
                 </div>
                
@@ -278,68 +213,8 @@
             </div>
           
         </div>
-        <script>
-            const sSpace=document.getElementById('space');
-            const sAlbum=document.getElementById('album');
-            const sWidth=370;
-            const sImg=document.querySelectorAll('.sli');
-            const sConunt=sImg.length;
-            let index=0;
-            const next=document.querySelector('.next');
-            const prev=document.querySelector('.prev');
-            sAlbum.style.width=sWidth*sConunt+'px';
-             
-          
-            // function move(num){
-            //     sAlbum.style.left=-num*sWidth+'px';
-            //     index=num;
-            // }
-            // prev.addEventListener('click',function(){
-            //     if(index!==0)move(index-1);
-            // })
-            // next.addEventListener('click',function(){
-            //     if(index!==sConunt-3){
-            //         move(index+1);
-            //     }
-            // })
-
-            const dot1=document.getElementById('dot1');        
-            const dot2=document.getElementById('dot2');        
-            const dot3=document.getElementById('dot3');        
-            const dot4=document.getElementById('dot4');    
-            window.onload=function(){
-                dot1.style.backgroundColor='#666'
-            }
-            dot1.addEventListener('click',function(){
-                sAlbum.style.left=0+'px'
-                
-            })
-            dot2.addEventListener('click',function(){
-                sAlbum.style.left=-sWidth+'px'
-
-            })
-            dot3.addEventListener('click',function(){
-                sAlbum.style.left=-sWidth*2+'px'
-            })
-            dot4.addEventListener('click',function(){
-                sAlbum.style.left=-sWidth*3+'px'
-            })
-            dot5.addEventListener('click',function(){
-                sAlbum.style.left=-sWidth*4+'px'
-            })
-        
-          
-            var init=document.getElementsByClassName('init');
-            for(var i=0;i<init.length;i++){
-                init[i].addEventListener('click',function(){
-                    for(var j=0;j<init.length;j++){
-                        init[j].style.backgroundColor='#fad091';
-                    }
-                    this.style.backgroundColor='#666';
-                })
-            }
-
-          
+        <script src="js/slider.js">
+            
         </script>
         <div class="bgbox bgbox_two">
         
@@ -448,12 +323,15 @@
         </div>
 
             <div id="bgimg">
+                <div id="filter">
                 <div id="bgtxt">
+                        
                     <h2>Hotel reservations <br>for your dogs</h2>
                     <div id="btnbox">
                         <a href="#">BOOK NOW</a>
                         <a href="#">CONTACT US</a>
                     </div>
+                </div>
                 </div>
             </div>
         
@@ -479,7 +357,7 @@
                     <div class="news_img">
                         <img src="img/main/news2.jpg" alt="">
                     </div>
-                    <div class="news_date"></div>
+                    <div class="news_date">April 01 2022</div>
                     <div class="news_text">
                        <p >
                            'Dogroom' 애견호텔 체크인/아웃 시간 안내
@@ -496,7 +374,7 @@
                         <img src="img/main/news3.jpg" alt="">
 
                     </div>
-                    <div class="news_date"></div>
+                    <div class="news_date">April 01 2022</div>
                     <div class="news_text">
                         <p >
                             'Dogroom' 애견호텔에서는 이용자의 편의를 위해
