@@ -20,10 +20,10 @@ $(function(){
             $('#space').css('opacity','1');
 
             $('.room_right').css('transform','translate(0, 0px)')
-        $('.room_left').css('transform','translate(0, 0px)')
-        $('#room').css('transform','translate(0, 0px)')
-        $('#price').css('opacity','1');
-        $('#price').css('transform','translate(0, -100px)')
+            $('.room_left').css('transform','translate(0, 0px)')
+            $('#room').css('transform','translate(0, 0px)')
+            $('#price').css('opacity','1');
+            $('#price').css('transform','translate(0, -100px)')
 
         }
         else if(slider+room+bgone+bgtwo<scroll){
@@ -35,10 +35,10 @@ $(function(){
             $('#space').css('opacity','1');
 
             $('.room_right').css('transform','translate(0, 0px)')
-        $('.room_left').css('transform','translate(0, 0px)')
-        $('#room').css('transform','translate(0, 0px)')
-        $('#price').css('opacity','1');
-        $('#price').css('transform','translate(0, -100px)')
+            $('.room_left').css('transform','translate(0, 0px)')
+            $('#room').css('transform','translate(0, 0px)')
+         $('#price').css('opacity','1');
+            $('#price').css('transform','translate(0, -100px)')
 
         
         }
@@ -48,10 +48,10 @@ $(function(){
             $('#space').css('opacity','1');
 
             $('.room_right').css('transform','translate(0, 0px)')
-        $('.room_left').css('transform','translate(0, 0px)')
-        $('#room').css('transform','translate(0, 0px)')
-        $('#price').css('opacity','1');
-        $('#price').css('transform','translate(0, -100px)')
+            $('.room_left').css('transform','translate(0, 0px)')
+            $('#room').css('transform','translate(0, 0px)')
+            $('#price').css('opacity','1');
+            $('#price').css('transform','translate(0, -100px)')
 
         }
         else if(slider+room<scroll){
@@ -59,23 +59,24 @@ $(function(){
             $('#space').css('opacity','1');
 
             $('.room_right').css('transform','translate(0, 0px)')
-        $('.room_left').css('transform','translate(0, 0px)')
-        $('#room').css('transform','translate(0, 0px)')
-        $('#price').css('opacity','1');
-        $('#price').css('transform','translate(0, -100px)')
+            $('.room_left').css('transform','translate(0, 0px)')
+            $('#room').css('transform','translate(0, 0px)')
+            $('#price').css('opacity','1');
+            $('#price').css('transform','translate(0, -100px)')
 
         }
         else if(slider<scroll){
-        $('.room_right').css('transform','translate(0, 0px)')
-        $('.room_left').css('transform','translate(0, 0px)')
-        $('#price').css('opacity','1');
-        $('#price').css('transform','translate(0, -100px)')
+            $('#room').css('transform','translate(0, 0px)')
+            $('.room_right').css('transform','translate(0, 0px)')
+            $('.room_left').css('transform','translate(0, 0px)')
+            $('#price').css('opacity','1');
+            $('#price').css('transform','translate(0, -100px)')
 
         // $('#price').css('margin','-100px auto');
         }
         else if(scroll>1){
-        $('#price').css('opacity','1');
-        $('#price').css('transform','translate(0, -100px)')
+            $('#price').css('opacity','1');
+            $('#price').css('transform','translate(0, -100px)')
 
         }
 });
