@@ -320,11 +320,11 @@ font-family: 'Poppins', sans-serif; */
     
     }
     .room_right{
-        transform: translate(-1000px, 0px);
+        /* transform: translate(-1000px, 0px); */
         transition: 1.2s ease-out;
     }
     .room_left{
-        transform: translate(1000px, 0px);
+        /* transform: translate(1000px, 0px); */
     
         transition: 2.2s ease-out;
     }
