@@ -7,7 +7,7 @@ font-family: 'Poppins', sans-serif; */
 
 
 
-@media(max-width:750px){
+@media screen and (max-width:750px){
     #slider{
         background-image: url(../img/main/main.jpg);
         background-repeat: no-repeat;
@@ -308,11 +308,13 @@ font-family: 'Poppins', sans-serif; */
         padding: 50px 0;
     }
     #room>div{
-        overflow: hidden;
-        width: 0%;
+        width: 100%;
         height: 800px;
         display: flex;
         flex-direction: column;
+        transition: 1s ease-out;
+        transform: translate(0, 400px);
+        opacity: 0;
         
     }
     #room>div img{
@@ -328,15 +330,6 @@ font-family: 'Poppins', sans-serif; */
         order: 1;
        
     
-    }
-    .room_right{
-        /* transform: translate(-1000px, 0px); */
-        transition: 1.2s ease-out;
-    }
-    .room_left{
-        /* transform: translate(1000px, 0px); */
-    
-        transition: 2.2s ease-out;
     }
     /* .first::after{
         content: "";
@@ -849,7 +842,7 @@ font-family: 'Poppins', sans-serif; */
     }
     
 }
-@media(min-width:751px){
+@media screen and (min-width:751px) and (max-width:1199px){
     #slider{
         background-image: url(../img/main/main.jpg);
         background-repeat: no-repeat;
@@ -1138,9 +1131,9 @@ font-family: 'Poppins', sans-serif; */
     #room{
         width: 100%;
         display: flex;
+        /* flex-wrap: wrap; */
         flex-direction: column;
         background-color: #f3f4f7;
-        transition: 1s ease-out;
     }
     
     #room>h2{
@@ -1152,11 +1145,13 @@ font-family: 'Poppins', sans-serif; */
         padding: 50px 0;
     }
     #room>div{
-        width: 0%;
-        overflow: hidden;
+        width: 100%;
         height: 400px;
         display: flex;
         opacity: 0;
+        transform: translate(0, 400px);
+    
+        transition: 1s ease-out;
         
     }
     #room>div img{
@@ -1170,15 +1165,7 @@ font-family: 'Poppins', sans-serif; */
        
     
     }
-    .room_right{
-        /* transform: translate(-1000px, 400px); */
-        transition: 1.3s ease-out;
-    }
-    .room_left{
-        /* transform: translate(1000px, 400px); */
-    
-        transition: 1.3s ease-out;
-    }
+
     .first::after{
         content: "";
         width: 0;
@@ -1690,7 +1677,7 @@ font-family: 'Poppins', sans-serif; */
     }
     
 }
-@media(min-width:1200px){
+@media screen and (min-width:1200px){
     #slider{
         background-image: url(../img/main/main.jpg);
         background-repeat: no-repeat;
@@ -1985,6 +1972,7 @@ font-family: 'Poppins', sans-serif; */
     #room{
         width: 100%;
         display: flex;
+
         flex-wrap: wrap;
         background-color: #f3f4f7;
         transform: translate(0, 400px);
@@ -2003,6 +1991,7 @@ font-family: 'Poppins', sans-serif; */
         width: 50%;
         height: 400px;
         display: flex;
+        opacity: 1;
         /* transition: 1s ease-out; */
         
     }
