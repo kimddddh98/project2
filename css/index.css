@@ -14,7 +14,7 @@ font-family: 'Poppins', sans-serif; */
         background-size: cover;
         background-position: bottom;
         width: 100%;
-        height: 900px;
+        height: 700px;
         background-attachment: fixed;
         display: flex;
         align-items: center;
@@ -94,7 +94,7 @@ font-family: 'Poppins', sans-serif; */
         align-items: center;
     }
     #content_text{
-        width: 45%;
+        width: 80%;
         transform: translate(0,150px);
         transition: 1s ease-out;
     
@@ -138,13 +138,17 @@ font-family: 'Poppins', sans-serif; */
         background-color: transparent;
         color: #fff;
     }
-    #content_form{
-        width: 40%;
+    .content_form{
+        width: 100%;
         background-color: #fff;
-        border-radius: 10px;
+        /* border-radius: 10px; */
+        margin: 0 auto;
         
     }
-    #content_form>form{
+    .hideform{
+        display: none;
+    }
+    .content_form>form{
         width: 100%;
         height: 400px;
         display: flex;
@@ -152,10 +156,10 @@ font-family: 'Poppins', sans-serif; */
         justify-content: space-around;
         align-content: space-around;
     }
-    #content_form>form input,#content_form>form select{
+    .content_form>form input,.content_form>form select{
         font-family: 'Poppins', sans-serif;
     }
-    #content_form>form input:first-of-type{
+    .content_form>form input:first-of-type{
         width: 90%;
         height: 40px;
         border-radius: 5px;
@@ -164,8 +168,8 @@ font-family: 'Poppins', sans-serif; */
         padding: 0 0 0 10px;
     
     }
-    #content_form>form input:not(:first-of-type),
-    #content_form>form select{
+    .content_form>form input:not(:first-of-type),
+    .content_form>form select{
         height: 40px;
         width: 40%;
         border-radius: 5px;
@@ -176,14 +180,14 @@ font-family: 'Poppins', sans-serif; */
     
     
     }
-    #content_form>form select{
+    .content_form>form select{
         font-family: 'Poppins', sans-serif,'Nanum Gothic Coding', monospace; 
         color: #777;
     }
     .option_color{
         color: #777;
     }
-    #content_form>form input[type='submit']{
+    .content_form>form input[type='submit']{
         width: 90%;
         height: 40px;
         background-color: #fad091;
@@ -196,11 +200,11 @@ font-family: 'Poppins', sans-serif; */
         font-weight: bold;
         letter-spacing: 3px;
     }
-    #content_form>form input[type='submit']:hover{
+    .content_form>form input[type='submit']:hover{
         background-color: transparent;
         color: #fad091;
     }
-    #content_form>form h3{
+    .content_form>form h3{
         width: 90%;
         height: 40px;
         font-family:'Playfair Display', serif;
@@ -969,13 +973,16 @@ font-family: 'Poppins', sans-serif; */
         background-color: transparent;
         color: #fff;
     }
-    #content_form{
+    .content_form{
         width: 40%;
         background-color: #fff;
         border-radius: 10px;
         
     }
-    #content_form>form{
+    .small_form{
+        display: none;
+    }
+    .content_form>form{
         width: 100%;
         height: 400px;
         display: flex;
@@ -983,10 +990,10 @@ font-family: 'Poppins', sans-serif; */
         justify-content: space-around;
         align-content: space-around;
     }
-    #content_form>form input,#content_form>form select{
+    .content_form>form input,.content_form>form select{
         font-family: 'Poppins', sans-serif;
     }
-    #content_form>form input:first-of-type{
+    .content_form>form input:first-of-type{
         width: 90%;
         height: 40px;
         border-radius: 5px;
@@ -995,8 +1002,8 @@ font-family: 'Poppins', sans-serif; */
         padding: 0 0 0 10px;
     
     }
-    #content_form>form input:not(:first-of-type),
-    #content_form>form select{
+    .content_form>form input:not(:first-of-type),
+    .content_form>form select{
         height: 40px;
         width: 40%;
         border-radius: 5px;
@@ -1007,14 +1014,14 @@ font-family: 'Poppins', sans-serif; */
     
     
     }
-    #content_form>form select{
+    .content_form>form select{
         font-family: 'Poppins', sans-serif,'Nanum Gothic Coding', monospace; 
         color: #777;
     }
     .option_color{
         color: #777;
     }
-    #content_form>form input[type='submit']{
+    .content_form>form input[type='submit']{
         width: 90%;
         height: 40px;
         background-color: #fad091;
@@ -1027,11 +1034,11 @@ font-family: 'Poppins', sans-serif; */
         font-weight: bold;
         letter-spacing: 3px;
     }
-    #content_form>form input[type='submit']:hover{
+    .content_form>form input[type='submit']:hover{
         background-color: transparent;
         color: #fad091;
     }
-    #content_form>form h3{
+    .content_form>form h3{
         width: 90%;
         height: 40px;
         font-family:'Playfair Display', serif;
@@ -1810,13 +1817,16 @@ font-family: 'Poppins', sans-serif; */
         background-color: transparent;
         color: #fff;
     }
-    #content_form{
+    .content_form{
         width: 350px;
         background-color: #fff;
         border-radius: 10px;
         
     }
-    #content_form>form{
+    .small_form{
+        display: none;
+    }
+    .content_form>form{
         width: 100%;
         height: 400px;
         display: flex;
@@ -1827,10 +1837,10 @@ font-family: 'Poppins', sans-serif; */
     
     
     }
-    #content_form>form input,#content_form>form select{
+    .content_form>form input,.content_form>form select{
         font-family: 'Poppins', sans-serif;
     }
-    #content_form>form input:first-of-type{
+    .content_form>form input:first-of-type{
         width: 320px;
         height: 40px;
         border-radius: 5px;
@@ -1839,8 +1849,8 @@ font-family: 'Poppins', sans-serif; */
         padding: 0 0 0 10px;
     
     }
-    #content_form>form input:not(:first-of-type),
-    #content_form>form select{
+    .content_form>form input:not(:first-of-type),
+    .content_form>form select{
         height: 40px;
         width: 150px;
         border-radius: 5px;
@@ -1851,14 +1861,14 @@ font-family: 'Poppins', sans-serif; */
     
     
     }
-    #content_form>form select{
+    .content_form>form select{
         font-family: 'Poppins', sans-serif,'Nanum Gothic Coding', monospace; 
         color: #777;
     }
     .option_color{
         color: #777;
     }
-    #content_form>form input[type='submit']{
+    .content_form>form input[type='submit']{
         width: 320px;
         height: 40px;
         background-color: #fad091;
@@ -1871,11 +1881,11 @@ font-family: 'Poppins', sans-serif; */
         font-weight: bold;
         letter-spacing: 3px;
     }
-    #content_form>form input[type='submit']:hover{
+    .content_form>form input[type='submit']:hover{
         background-color: transparent;
         color: #fad091;
     }
-    #content_form>form h3{
+    .content_form>form h3{
         width: 320px;
         height: 40px;
         font-family:'Playfair Display', serif;
