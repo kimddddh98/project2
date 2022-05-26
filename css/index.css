@@ -48,6 +48,7 @@ font-family: 'Poppins', sans-serif; */
     #menu{
         width: 35px;
         height: 40px;
+        margin-right: 5px;
         /* display: none; */
     }
     #menu img{
