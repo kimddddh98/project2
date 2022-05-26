@@ -1136,9 +1136,8 @@ font-family: 'Poppins', sans-serif; */
     #room{
         width: 100%;
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         background-color: #f3f4f7;
-        transform: translate(0, 400px);
         transition: 1s ease-out;
     }
     
@@ -1151,10 +1150,11 @@ font-family: 'Poppins', sans-serif; */
         padding: 50px 0;
     }
     #room>div{
-        width: 100%;
+        width: 0%;
+        overflow: hidden;
         height: 400px;
         display: flex;
-        /* transition: 1s ease-out; */
+        opacity: 0;
         
     }
     #room>div img{
