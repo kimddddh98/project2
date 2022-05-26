@@ -9,7 +9,7 @@ font-family: 'Poppins', sans-serif; */
 
 @media(max-width:750px){
     #slider{
-        background-image: url(../img/main/main.jpg);
+        background-image: url(../img/main/main_small.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: bottom;
