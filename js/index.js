@@ -1,14 +1,14 @@
 $(function(){
     $(window).scroll(function(){
     const slider=document.getElementById('slider').scrollHeight;
-    const room=document.getElementById('room').scrollHeight;
+    const room=document.getElementById('room').scrollHeight-200;
     const bgone=document.getElementsByClassName('bgbox_one')[0].scrollHeight;
     const bgtwo=document.getElementsByClassName('bgbox_two')[0].scrollHeight;
     const bgtxt=document.getElementById('bgtxt').scrollHeight;
     const bgthree=document.getElementsByClassName('bgbox_three')[0].scrollHeight;
     const smform=document.getElementsByClassName('small_form')[0].scrollHeight
     const height=document.getElementById('wrap').scrollHeight
-    const price=document.getElementById('price').scrollHeight-200
+    const price=document.getElementById('price').scrollHeight
     var scroll=$(window).scrollTop();
         if(window.matchMedia("(max-width: 1199px)").matches){
         if(slider+price+room+bgone+bgtwo+bgtxt<scroll){
