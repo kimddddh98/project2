@@ -14,31 +14,27 @@ $(function(){
         if(slider+price+smform+room+bgone+bgtwo+bgtxt<scroll){
             $('#news').css('transform','translate(0, 0px)')
             $('#news').css('opacity','1')
-
             $('#bgtxt').css('transform','translate(0, 0px)')
             $('#bgtxt').css('opacity','1')
             $('#con').css('transform','translate(0, 0px)')
             $('#space').css('transform','translate(0, 0px)')
             $('#space').css('opacity','1');
-
             $('.room_right').css('transform','translate(0, 0px)')
             $('.room_left').css('transform','translate(0, 0px)')
-            $('#room').css('transform','translate(0, 0px)')
-            $('#price').css('opacity','1');
+            $('#room>div').css('width','100%')
             $('#price').css('transform','translate(0, 0px)')
 
         }
         else if(slider+price+smform+room+bgone+bgtwo<scroll){
             $('#bgtxt').css('transform','translate(0, 0px)')
             $('#bgtxt').css('opacity','1')
-
             $('#con').css('transform','translate(0, 0px)')
             $('#space').css('transform','translate(0, 0px)')
             $('#space').css('opacity','1');
-
             $('.room_right').css('transform','translate(0, 0px)')
             $('.room_left').css('transform','translate(0, 0px)')
-            $('#room').css('transform','translate(0, 0px)')
+            $('#room>div').css('width','100%')
+
          $('#price').css('opacity','1');
             $('#price').css('transform','translate(0, 0px)')
 
@@ -48,10 +44,9 @@ $(function(){
             $('#con').css('transform','translate(0, 0px)')
             $('#space').css('transform','translate(0, 0px)')
             $('#space').css('opacity','1');
-
             $('.room_right').css('transform','translate(0, 0px)')
             $('.room_left').css('transform','translate(0, 0px)')
-            $('#room').css('transform','translate(0, 0px)')
+            $('#room>div').css('width','100%')
             $('#price').css('opacity','1');
             $('#price').css('transform','translate(0, 0px)')
 
@@ -59,10 +54,9 @@ $(function(){
         else if(slider+price+smform+room<scroll){
             $('#space').css('transform','translate(0, 0px)')
             $('#space').css('opacity','1');
-
             $('.room_right').css('transform','translate(0, 0px)')
             $('.room_left').css('transform','translate(0, 0px)')
-            $('#room').css('transform','translate(0, 0px)')
+            $('#room>div').css('width','100%')
             $('#price').css('opacity','1');
             $('#price').css('transform','translate(0, 0px)')
 
@@ -71,6 +65,7 @@ $(function(){
             $('#room').css('transform','translate(0, 0px)')
             $('.room_right').css('transform','translate(0, 0px)')
             $('.room_left').css('transform','translate(0, 0px)')
+            $('#room>div').css('width','100%')
             $('#price').css('opacity','1');
             $('#price').css('transform','translate(0, 0px)')
 

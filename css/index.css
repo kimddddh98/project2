@@ -305,7 +305,8 @@ font-family: 'Poppins', sans-serif; */
         padding: 50px 0;
     }
     #room>div{
-        width: 100%;
+        overflow: hidden;
+        width: 0%;
         height: 800px;
         display: flex;
         flex-direction: column;
@@ -552,8 +553,8 @@ font-family: 'Poppins', sans-serif; */
         justify-content: space-around;
     }
     .check_list{
-        width: 60px;
-        height: 60px;
+        width: 40px;
+        height: 40px;
         /* background-color: #41f08f; */
         background-color: #fad091;
         border-radius: 50%;
@@ -563,6 +564,7 @@ font-family: 'Poppins', sans-serif; */
     }
     .check_text{
         width: 75%;
+        height: 100%;
         font-size: 12px;
         
     }
@@ -1166,11 +1168,11 @@ font-family: 'Poppins', sans-serif; */
     
     }
     .room_right{
-        transform: translate(-1000px, 400px);
+        /* transform: translate(-1000px, 400px); */
         transition: 1.3s ease-out;
     }
     .room_left{
-        transform: translate(1000px, 400px);
+        /* transform: translate(1000px, 400px); */
     
         transition: 1.3s ease-out;
     }
