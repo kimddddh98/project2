@@ -62,7 +62,7 @@ const sSpace=document.getElementById('space');
                     },1000)
                     setTimeout(function(){
                         sAlbum.style.transition='1s'
-                    },1005)
+                    },1050)
                     
                 }
             
