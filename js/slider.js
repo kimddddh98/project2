@@ -9,33 +9,36 @@ const sSpace=document.getElementById('space');
             sAlbum.style.width=sWidth*sConunt+'px';
             const itemWidth=document.getElementById('album').offsetWidth
             let per=sSpace.offsetWidth/2
-            let item=document.querySelector('.sli').offsetWidth
-
+            let item=document.querySelector('#space').offsetWidth
+            
             const dot1=document.getElementById('dot1');        
             const dot2=document.getElementById('dot2');        
             const dot3=document.getElementById('dot3');        
-            const dot4=document.getElementById('dot4');    
+            const dot4=document.getElementById('dot4');
+
         if(window.matchMedia("(max-width: 750px)").matches){
             sAlbum.style.width=sWidth*sConunt+'px';
+            // sImg[0,1,2,3,4,5,6].style.width=item/2+'px'
+            let img_width=sImg[0].offsetWidth+20
             dot1.addEventListener('click',function(){
                 sAlbum.style.left=0+'px'
                 
             })
             dot2.addEventListener('click',function(){
-                sAlbum.style.left=-itemWidth+'px'
+                sAlbum.style.left=-img_width+'px'
 
             })
             dot3.addEventListener('click',function(){
-                sAlbum.style.left=-itemWidth*2+'px'
+                sAlbum.style.left=-img_width*2+'px'
             })
             dot4.addEventListener('click',function(){
-                sAlbum.style.left=-itemWidth*3+'px'
+                sAlbum.style.left=-img_width*3+'px'
             })
             dot5.addEventListener('click',function(){
-                sAlbum.style.left=-itemWidth*4+'px'
+                sAlbum.style.left=-img_width*4+'px'
             })
         }
-
+        if(window.matchMedia("(min-width: 751px)").matches){
             // function move(num){
             //     sAlbum.style.left=-num*sWidth+'px';
             //     index=num;
@@ -70,6 +73,10 @@ const sSpace=document.getElementById('space');
             dot5.addEventListener('click',function(){
                 sAlbum.style.left=-sWidth*4+'px'
             })
+        }
+        
+
+            
         
           
             var init=document.getElementsByClassName('init');
