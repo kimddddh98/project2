@@ -10,7 +10,79 @@ $(function(){
     const height=document.getElementById('wrap').scrollHeight
     const price=document.getElementById('price').scrollHeight
     var scroll=$(window).scrollTop();
-        if(window.matchMedia("(max-width: 1199px)").matches){
+        if(window.matchMedia("(max-width: 751px)").matches){
+            if(slider+price+room+bgone+bgtwo+bgtxt<scroll){
+                $('#news').css('transform','translate(0, 0px)')
+                $('#news').css('opacity','1')
+                $('#bgtxt').css('transform','translate(0, 0px)')
+                $('#bgtxt').css('opacity','1')
+                $('#con').css('transform','translate(0, 0px)')
+                $('#space').css('transform','translate(0, 0px)')
+                $('#space').css('opacity','1');
+                $('.room_right').css('transform','translate(0, 0px)')
+                $('.room_left').css('transform','translate(0, 0px)')
+                $('#room>div').css('opacity','1')
+                $('#room').css('transform','translate(0, 0px)')
+                $('#price').css('opacity','1');
+                $('#price').css('transform','translate(0, 0px)')
+    
+            }
+            else if(slider+price+room+bgone+bgtwo<scroll){
+                $('#bgtxt').css('transform','translate(0, 0px)')
+                $('#bgtxt').css('opacity','1')
+                $('#con').css('transform','translate(0, 0px)')
+                $('#space').css('transform','translate(0, 0px)')
+                $('#space').css('opacity','1');
+                $('.room_right').css('transform','translate(0, 0px)')
+                $('.room_left').css('transform','translate(0, 0px)')
+                $('#room>div').css('opacity','1')
+                $('#room').css('transform','translate(0, 0px)')
+                 $('#price').css('opacity','1');
+                $('#price').css('transform','translate(0, 0px)')
+    
+            
+            }
+            else if(slider+price+room+bgone<scroll){
+                $('#con').css('transform','translate(0, 0px)')
+                $('#space').css('transform','translate(0, 0px)')
+                $('#space').css('opacity','1');
+    
+                $('.room_right').css('transform','translate(0, 0px)')
+                $('.room_left').css('transform','translate(0, 0px)')
+                $('#room>div').css('opacity','1')
+                $('#room').css('transform','translate(0, 0px)')
+                $('#price').css('opacity','1');
+                $('#price').css('transform','translate(0, 0px)')
+    
+            }
+            else if(slider+price+room<scroll){
+                $('#space').css('transform','translate(0, 0px)')
+                $('#space').css('opacity','1');
+    
+                $('.room_right').css('transform','translate(0, 0px)')
+                $('.room_left').css('transform','translate(0, 0px)')
+                $('#room>div').css('opacity','1')
+                
+                $('#room').css('transform','translate(0, 0px)')
+                $('#price').css('opacity','1');
+                $('#price').css('transform','translate(0, 0px)')
+    
+            }
+            else if(slider+price<scroll){
+                $('#room>div').css('opacity','1')
+                $('#room').css('transform','translate(0, 0px)')
+                $('.room_right').css('transform','translate(0, 0px)')
+                $('.room_left').css('transform','translate(0, 0px)')
+                $('#price').css('opacity','1');
+                $('#price').css('transform','translate(0, 0px)')
+    
+            }
+            else if(scroll>1){
+                $('#price').css('opacity','1');
+                $('#price').css('transform','translate(0, 0px)')
+            }
+        }
+        if(window.matchMedia("(min-width: 751px)").matches){
         if(slider+price+room+bgone+bgtwo+bgtxt<scroll){
             $('#news').css('transform','translate(0, 0px)')
             $('#news').css('opacity','1')
