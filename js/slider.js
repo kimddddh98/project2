@@ -43,21 +43,54 @@ const sSpace=document.getElementById('space');
             dot7.addEventListener('click',function(){
                 sAlbum.style.left=-img_width*6+'px'
             })
+            
         }
         if(window.matchMedia("(min-width: 751px)").matches){
-       
-           
             window.onload=function(){
                 dot1.style.backgroundColor='#666'
             }
+            
+         
+           
+            
             dot1.addEventListener('click',function(){
-                sAlbum.style.left=0+'px'
-                
-            })
+                if(sAlbum.style.left==-sWidth*6+'px'||sAlbum.style.left==-sWidth*5+'px'){
+                    sAlbum.style.left=-sWidth*7+'px'
+                    setTimeout(function(){
+                   sAlbum.style.left=0+'px'
+                    sAlbum.style.transition='none'    
+                    },1000)
+                    setTimeout(function(){
+                        sAlbum.style.transition='1s'
+                    },1005)
+                    
+                }
+            
+                else{
+                    sAlbum.style.left=0+'px'
+                }
+            });
             dot2.addEventListener('click',function(){
-                sAlbum.style.left=-sWidth+'px'
-
-            })
+                if(sAlbum.style.left==-sWidth*6+'px'||sAlbum.style.left==-sWidth*5+'px'){
+                    sAlbum.style.left=-sWidth*8+'px'
+                    setTimeout(function(){
+                   sAlbum.style.left=-sWidth+'px'
+                    sAlbum.style.transition='none'    
+                    },1000)
+                    setTimeout(function(){
+                        sAlbum.style.transition='1s'
+                    },1050)
+                    
+                }
+            
+                else{
+                    sAlbum.style.left=-sWidth+'px'
+                }
+            });
+            
+            
+           
+          
             dot3.addEventListener('click',function(){
                 sAlbum.style.left=-sWidth*2+'px'
             })
@@ -73,6 +106,7 @@ const sSpace=document.getElementById('space');
             dot7.addEventListener('click',function(){
                 sAlbum.style.left=-sWidth*6+'px'
             })
+          
         }
             var init=document.getElementsByClassName('init');
             for(var i=0;i<init.length;i++){
