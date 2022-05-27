@@ -37,21 +37,15 @@ const sSpace=document.getElementById('space');
             dot5.addEventListener('click',function(){
                 sAlbum.style.left=-img_width*4+'px'
             })
+            dot6.addEventListener('click',function(){
+                sAlbum.style.left=-img_width*5+'px'
+            })
+            dot7.addEventListener('click',function(){
+                sAlbum.style.left=-img_width*6+'px'
+            })
         }
         if(window.matchMedia("(min-width: 751px)").matches){
-            // function move(num){
-            //     sAlbum.style.left=-num*sWidth+'px';
-            //     index=num;
-            // }
-            // prev.addEventListener('click',function(){
-            //     if(index!==0)move(index-1);
-            // })
-            // next.addEventListener('click',function(){
-            //     if(index!==sConunt-3){
-            //         move(index+1);
-            //     }
-            // })
-
+       
            
             window.onload=function(){
                 dot1.style.backgroundColor='#666'
@@ -73,12 +67,13 @@ const sSpace=document.getElementById('space');
             dot5.addEventListener('click',function(){
                 sAlbum.style.left=-sWidth*4+'px'
             })
+            dot6.addEventListener('click',function(){
+                sAlbum.style.left=-sWidth*5+'px'
+            })
+            dot7.addEventListener('click',function(){
+                sAlbum.style.left=-sWidth*6+'px'
+            })
         }
-        
-
-            
-        
-          
             var init=document.getElementsByClassName('init');
             for(var i=0;i<init.length;i++){
                 init[i].addEventListener('click',function(){
@@ -88,5 +83,20 @@ const sSpace=document.getElementById('space');
                     this.style.backgroundColor='#666';
                 })
             }
+
+
+                 // function move(num){
+            //     sAlbum.style.left=-num*sWidth+'px';
+            //     index=num;
+            // }
+            // prev.addEventListener('click',function(){
+            //     if(index!==0)move(index-1);
+            // })
+            // next.addEventListener('click',function(){
+            //     if(index!==sConunt-3){
+            //         move(index+1);
+            //     }
+            // })
+
 
           
