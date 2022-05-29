@@ -1,4 +1,15 @@
 $(function(){
+    $('#menu').click(function(){
+
+        $('#clickmenu').css('opacity','1')
+        $('#clickmenu').css('width','100%')
+
+    })
+    $('#closemenu').click(function(){
+        $('#clickmenu').css('opacity','0')
+        $('#clickmenu').css('width','0%')
+
+    })
     $(window).scroll(function(){
     const slider=document.getElementById('slider').scrollHeight;
     const room=document.getElementById('room').scrollHeight-200;
@@ -11,6 +22,7 @@ $(function(){
     const price=document.getElementById('price').scrollHeight
     var scroll=$(window).scrollTop();
         if(window.matchMedia("(max-width: 751px)").matches){
+          
             if(slider+price+room+bgone+bgtwo+bgtxt<scroll){
                 $('#news').css('transform','translate(0, 0px)')
                 $('#news').css('opacity','1')
