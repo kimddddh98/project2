@@ -18,7 +18,7 @@ font-family: 'Poppins', sans-serif; */
         background-color: #fff;
     }
     #slider{
-        background-image: url(../img/main/main_small.jpg);
+        background-image: url(../img/main/main.jpg);
         background-repeat: no-repeat;
        
         background-size: cover;
