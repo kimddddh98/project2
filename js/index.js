@@ -1,15 +1,7 @@
+
 $(function(){
-    $('#menu').click(function(){
-
-        $('#clickmenu').css('opacity','1')
-        $('#clickmenu').css('width','100%')
-
-    })
-    $('#closemenu').click(function(){
-        $('#clickmenu').css('opacity','0')
-        $('#clickmenu').css('width','0%')
-
-    })
+ 
+    
     $(window).scroll(function(){
     const slider=document.getElementById('slider').scrollHeight;
     const room=document.getElementById('room').scrollHeight-200;
@@ -245,7 +237,21 @@ $(function(){
         
 });
 
+
 $(document).ready(function(){
     $('#content_text').css('transform','translate(0, 0px)')
     });
+    $('#menu').click(function(){
+        $('#clickmenu').css('opacity','1')
+        $('#clickmenu').css('width','100%')
+        $('html,body').addClass('hidden')
+    })
+    $('#closemenu').click(function(){
+        $('#clickmenu').css('opacity','0')
+        $('#clickmenu').css('width','0%')
+        $('html,body').removeClass('hidden')
+
+    
+    })
 });
+

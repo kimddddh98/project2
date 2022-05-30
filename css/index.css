@@ -8,13 +8,19 @@ font-family: 'Poppins', sans-serif; */
 
 
 @media screen and (max-width:750px){
+    .hidden{
+        height: 100%;
+        min-height: 100%;
+        overflow: hidden;
+        touch-action: none;
+    }
     #slider{
         background-image: url(../img/main/main.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: bottom;
         /* background-position: center center; */
-        /* width: 100%; */
+        width: 100%;
         height: 700px;
         background-attachment: fixed;
         display: flex;
@@ -195,21 +201,30 @@ font-family: 'Poppins', sans-serif; */
     .content_form{
         width: 100%;
         height: 450px;
-        background-color: #fff;
-        /* border-radius: 10px; */
         margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
         
     }
     .hideform{
         display: none;
     }
     .content_form>form{
-        width: 100%;
+        width: 90%;
         height: 400px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         align-content: space-around;
+        box-shadow: 0px 10px 5px 1px #ccc;
+        background-color: #fff;
+        border-radius: 10px;
+
+
+
+
     }
     .content_form>form input,.content_form>form select{
         font-family: 'Poppins', sans-serif;
