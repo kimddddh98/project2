@@ -27,7 +27,7 @@ font-family: 'Poppins', sans-serif; */
         -o-background-size: cover;
         background-position: bottom;
         min-width: 100%;
-        height: 100vh;
+        height: 80vh;
         background-attachment:  fixed;
         display: flex;
         align-items: center;
@@ -659,14 +659,14 @@ font-family: 'Poppins', sans-serif; */
     
     #bgimg{
         width: 100%;
-        height: 300px;
-        /* background-image: url(../img/main/main.jpg);
+        height: 30vh;
+        background-image: url(../img/main/main.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        background-attachment: fixed ; */
+        background-attachment: fixed ;
     }
-    #bgimg::after{
+    /* #bgimg::after{
         content: '';
         position: fixed;
         top:0;
@@ -681,7 +681,7 @@ font-family: 'Poppins', sans-serif; */
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
-    }
+    } */
     #filter{
         width: 100%;
         height: 100%;
