@@ -19,7 +19,7 @@ const sSpace=document.getElementById('space');
 
         if(window.matchMedia("(max-width: 750px)").matches){
             // sImg[0,1,2,3,4,5,6,7,8,9,10].style.width=item/2+'px'
-            let img_width=sImg[0].offsetWidth+20
+            let img_width=sImg[0].offsetWidth+10
             sAlbum.style.width=img_width*sConunt+'px';
             dot1.addEventListener('click',function(){
                 if(sAlbum.style.left==-img_width*6+'px'||sAlbum.style.left==-img_width*5+'px'){
@@ -79,8 +79,7 @@ const sSpace=document.getElementById('space');
             }
             
         }
-
-
+       
         if(window.matchMedia("(min-width: 751px)").matches){
             window.onload=function(){
                 dot1.style.backgroundColor='#666'
