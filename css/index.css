@@ -43,9 +43,9 @@ font-family: 'Poppins', sans-serif; */
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        -webkit-background-size: cover;
+        /* -webkit-background-size: cover;
         -moz-background-size: cover;
-        -o-background-size: cover;
+        -o-background-size: cover; */
     }
 
     #wrap{
@@ -160,10 +160,10 @@ font-family: 'Poppins', sans-serif; */
         left:0%;
         transition: all 0.5s ease;
     }
-    #under_home{
+    .under_home{
         color: #fad091;
     }
-    #under_home::after{
+    .under_home::after{
         width: 100%;
         left: 0%;
     }
@@ -1018,10 +1018,10 @@ font-family: 'Poppins', sans-serif; */
         left:0%;
         transition: all 0.5s ease;
     }
-    #under_home{
+    .under_home{
         color: #fad091;
     }
-    #under_home::after{
+    .under_home::after{
         width: 100%;
         left: 0%;
     }
@@ -1857,10 +1857,10 @@ font-family: 'Poppins', sans-serif; */
         left:0%;
         transition: all 0.5s ease;
     }
-    #under_home{
+    .under_home{
         color: #fad091;
     }
-    #under_home::after{
+    .under_home::after{
         width: 100%;
         left: 0%;
     }
