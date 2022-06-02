@@ -11,8 +11,8 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <script src="js/index.js">
-    </script>
+    <!-- <script src="js/index.js"> -->
+    <!-- </script> -->
     <!-- <script>
         window.onresize = function(){
   document.location.reload();
@@ -59,9 +59,18 @@
         <div id="room">
             <div class="room_right">
                 <div class="room_img">
-                    <img src="img/main/room_1.jpg" alt="">
+                    <div class="sli">
+                        <div class="li" id="li1">
+                            <img src="img/main/room_1.jpg" alt="">
+                            <img src="img/main/room_1.jpg" alt="">
+                            <img src="img/main/room_1.jpg" alt="">
+                            <img src="img/main/room_1.jpg" alt="">
+        
+                            </div>
+                    </div>
                     <div class="dot">
-                        &lt;<p><span></span><span></span></p>&gt;
+                        <span class="btn prev">&lt;</span><p><span></span><span></span></p><span class="btn next">&gt;</span>
+                       
                     </div>
 
                 </div>
@@ -77,9 +86,17 @@
 
             <div class="room_right">
                 <div class="room_img">
-                    <img src="img/main/room2.jpg" alt="">
+                    <div class="sli">
+                        <div class="li" id="li2">
+                        <img src="img/main/room2.jpg" alt="">
+                        <img src="img/main/room2.jpg" alt="">
+
+                        </div>
+                    </div>
                     <div class="dot">
-                        &lt;<p><span></span><span></span></p>&gt;
+                        <span class="btn prev">&lt;</span><p><span></span><span></span></p><span class="btn next">&gt;</span>
+
+
                     </div>
 
                 </div>
@@ -103,9 +120,17 @@
                 </div>
 
                 <div class="room_img">
-                    <img src="img/main/room3.jpg" alt="">
+                    <div class="sli">
+                        <div class="li" id="li3">
+                            <img src="img/main/room3.jpg" alt="">
+                            <img src="img/main/room3.jpg" alt="">
+        
+                            </div>
+                    </div>
                     <div class="dot">
-                        &lt;<p><span></span><span></span></p>&gt;
+                        <span class="btn prev">&lt;</span><p><span></span><span></span></p><span class="btn next">&gt;</span>
+
+
                     </div>
 
                 </div>
@@ -122,9 +147,16 @@
                 </div>
 
                 <div class="room_img">
-                    <img src="img/main/room4.jpg" alt="">
+                    <div class="sli ">
+                        <div class="li" id="li4">
+                            <img src="img/main/room4.jpg" alt="">
+                            <img src="img/main/room4.jpg" alt="">
+        
+                            </div>
+                    </div>
                     <div class="dot">
-                        &lt;<p><span></span><span></span></p>&gt;
+                        <span class="btn prev">&lt;</span><p><span></span><span></span></p><span class="btn next">&gt;</span>
+
                     </div>
 
                 </div>
@@ -132,6 +164,76 @@
 
         </div>
         </div>
+        <script>
+            const prev=document.querySelectorAll('.prev');
+            const next=document.querySelectorAll('.next');
+            let index1=0;
+            let index2=0;
+            let index3=0;
+            let index4=0;
+            for(var i=1;i<=4;i++){
+            var li=document.getElementById('li'+i);
+            var lis=document.querySelectorAll('.li');
+            var width=li.children.length
+            li.style.width=715*width+'px'
+          
+            
+            }
+            // prev[0].onclick=function(){
+            //         lis[0].style.left=715*index1+'px'
+                    
+            //         if(index1==lis[0].children.length-1){
+            //             index1=0;
+            //         }else{
+            //             index1++
+            //         }
+            //     }
+            next[0].onclick=function(){
+                    lis[0].style.left=-715*index1+'px'
+                    
+                    if(index1==lis[0].children.length-1){
+                        index1=0;
+                    }else{
+                        index1++
+                    }
+                }
+            next[1].onclick=function(){
+                    lis[1].style.left=-715*index2+'px'
+                    if(index2==lis[1].children.length-1){
+                        index2=0;
+                    }else{
+                        index2++
+                    }
+                }
+            next[2].onclick=function(){
+                    lis[2].style.left=-715*index3+'px'
+                    if(index3==lis[2].children.length-1){
+                        index3=0;
+                    }else{
+                        index3++
+                    }
+                }
+            next[3].onclick=function(){
+                    lis[3].style.left=-715*index4+'px'
+                    if(index4==lis[3].children.length-1){
+                        index4=0;
+                    }else{
+                        index4++
+                    }
+                }
+           
+            // for(var y=1;y<=4;y++){
+            //     const x=document.querySelectorAll('.li');
+            //     prev[i].onclick=function(){
+            //     x[i].style.left=-715+'px'
+
+            // }    
+            // }
+         
+
+        
+            
+        </script>
         <footer>
             <div id="foot">
                 <div>
