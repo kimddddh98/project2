@@ -10,6 +10,22 @@
     <link rel="stylesheet" href="css/sub.css">
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/subslider.js"></script>
+    <script>
+        $(function(){
+            $('.form').click(function(){
+                $('#reform').fadeIn();
+                // $('html,body').addClass('hidden')
+                });
+            $(document).on('click',function(e){
+                if($('.small_form,#reform').is(e.target)){
+                    $('#reform').fadeOut();
+                // $('html,body').removeClass('hidden')
+
+                }
+            })
+        });
+    </script>
 
     <!-- <script src="js/index.js"> -->
     <!-- </script> -->
@@ -62,9 +78,7 @@
                     <div class="sli">
                         <div class="li" id="li1">
                             <img src="img/main/room_1.jpg" alt="">
-                            <img src="img/main/room_1.jpg" alt="">
-                            <img src="img/main/room_1.jpg" alt="">
-                            <img src="img/main/room_1.jpg" alt="">
+                            <img src="img/sub/1.jpg" alt="">
         
                             </div>
                     </div>
@@ -80,7 +94,7 @@
                     <p>중/소형견 전용</p>
                     <p class="poppins">Rooms in total : 20</p>
 
-                    <a href="#">View Room Details</a>
+                    <span class="form">Reservations Now</span>
                 </div>
             </div>
 
@@ -89,7 +103,7 @@
                     <div class="sli">
                         <div class="li" id="li2">
                         <img src="img/main/room2.jpg" alt="">
-                        <img src="img/main/room2.jpg" alt="">
+                        <img src="img/sub/s2.jpg" alt="">
 
                         </div>
                     </div>
@@ -104,7 +118,7 @@
                     <p>Superior</p>
                     <p>중/소형견 전용</p>
                     <p class="poppins">Rooms in total : 20</p>
-                    <a href="#">View Room Details</a>
+                    <span class="form">Reservations Now</span>
 
                 </div>
             </div>
@@ -114,8 +128,7 @@
                     <p>Suite</p>
                     <p>중/대형견 전용</p>
                     <p class="poppins">Rooms in total : 10</p>
-
-                    <a href="#">View Room Details</a>
+                    <span class="form">Reservations Now</span>
 
                 </div>
 
@@ -123,12 +136,13 @@
                     <div class="sli">
                         <div class="li" id="li3">
                             <img src="img/main/room3.jpg" alt="">
-                            <img src="img/main/room3.jpg" alt="">
+                            <img src="img/sub/suite.jpg" alt="">
+                            <img src="img/sub/suite2.jpg" alt="">
         
                             </div>
                     </div>
                     <div class="dot">
-                        <span class="btn prev">&lt;</span><p><span></span><span></span></p><span class="btn next">&gt;</span>
+                        <span class="btn prev">&lt;</span><p><span></span> <span></span> <span></span></p><span class="btn next">&gt;</span>
 
 
                     </div>
@@ -141,8 +155,7 @@
                     <p>Royal-Suite</p>
                     <p>대/중/소형견 전용</p>
                     <p class="poppins">Rooms in total : 10</p>
-
-                    <a href="#">View Room Details</a>
+                    <span class="form">Reservations Now</span>
 
                 </div>
 
@@ -150,7 +163,7 @@
                     <div class="sli ">
                         <div class="li" id="li4">
                             <img src="img/main/room4.jpg" alt="">
-                            <img src="img/main/room4.jpg" alt="">
+                            <img src="img/sub/royal.jpg" alt="">
         
                             </div>
                     </div>
@@ -164,76 +177,35 @@
 
         </div>
         </div>
-        <script>
-            const prev=document.querySelectorAll('.prev');
-            const next=document.querySelectorAll('.next');
-            let index1=0;
-            let index2=0;
-            let index3=0;
-            let index4=0;
-            for(var i=1;i<=4;i++){
-            var li=document.getElementById('li'+i);
-            var lis=document.querySelectorAll('.li');
-            var width=li.children.length
-            li.style.width=715*width+'px'
-          
-            
-            }
-            // prev[0].onclick=function(){
-            //         lis[0].style.left=715*index1+'px'
-                    
-            //         if(index1==lis[0].children.length-1){
-            //             index1=0;
-            //         }else{
-            //             index1++
-            //         }
-            //     }
-            next[0].onclick=function(){
-                    lis[0].style.left=-715*index1+'px'
-                    
-                    if(index1==lis[0].children.length-1){
-                        index1=0;
-                    }else{
-                        index1++
-                    }
-                }
-            next[1].onclick=function(){
-                    lis[1].style.left=-715*index2+'px'
-                    if(index2==lis[1].children.length-1){
-                        index2=0;
-                    }else{
-                        index2++
-                    }
-                }
-            next[2].onclick=function(){
-                    lis[2].style.left=-715*index3+'px'
-                    if(index3==lis[2].children.length-1){
-                        index3=0;
-                    }else{
-                        index3++
-                    }
-                }
-            next[3].onclick=function(){
-                    lis[3].style.left=-715*index4+'px'
-                    if(index4==lis[3].children.length-1){
-                        index4=0;
-                    }else{
-                        index4++
-                    }
-                }
-           
-            // for(var y=1;y<=4;y++){
-            //     const x=document.querySelectorAll('.li');
-            //     prev[i].onclick=function(){
-            //     x[i].style.left=-715+'px'
-
-            // }    
-            // }
-         
-
-        
-            
-        </script>
+        <div id="reform">
+            <div class="content_form small_form">
+                <form action="#">
+                    <h3>Book your Hotel</h3>
+                    <input type="text" placeholder="Full Name" name="re">
+                    <input type="text" name="re" onfocus="(this.type='date')" placeholder="Check-In">
+                    <input type="text" name="re" onfocus="(this.type='date')" placeholder="Check-Out">
+                    <select name="re" >
+                        <option value="" disabled selected>Dog-type</option>
+                        <option value="소형견">소형견</option>
+                        <option value="중형견">중형견</option>
+                        <option value="대형견">대형견</option>
+                    </select>
+                    <select name="re">
+                        <option value="" disabled selected >Room-type</option>
+    
+                        <option value="디럭스">디럭스</option>
+                        <option value="슈페리어">슈페리어</option>
+                        <option value="스위트">스위트</option>
+                        <option value="로얄스위트">로얄스위트</option>
+                    </select>
+                    <input type="tel" placeholder="Phone Number">
+                    <input type="text" name="re" onfocus="(this.type='time')"  placeholder="Check-in Time">
+    
+                    <!-- <input type="time" name="re"  value="08:00:00" min="08:00:00" max="20:00:00"><br> -->
+                    <input type="submit" value="예약하기">
+                </form>
+            </div>
+        </div>
         <footer>
             <div id="foot">
                 <div>
