@@ -32,7 +32,25 @@ $(function(){
     $('#closemenu').click(function(){
         $('#clickmenu').css('width','0%')
     })
+    $('#type h4').eq(1).click(function(){
+        $('#room').fadeOut(500,function(){
+        $('.bgbox').css('height','auto')
+        $('#space').slideDown(1000)      
+        $('#space').css('display','flex')      
+        });
+    });
+    $('#type h4').eq(0).click(function(){
+        $('#space').fadeOut(500,function(){
+        $('#room').slideDown(1000)  
+
+            // $('.bgbox').css('height','2050px')
+
+        });    
+
+
+    });
 });
+
 window.onload= function(){
 const prev=document.querySelectorAll('.prev');
 const next=document.querySelectorAll('.next');
@@ -43,7 +61,6 @@ var index2=0;
 var index3=0;
 var index4=0;
 var lis=document.querySelectorAll('.li');
-console.log(dota)
 for(var i=1;i<=4;i++){
 var li=document.getElementById('li'+i);
 var width=li.children.length
@@ -52,9 +69,9 @@ li.style.width=100*width+'%'
 }
 let img=document.querySelector('.sli')
 let imgwidth=document.querySelectorAll('.li img')
-for(var k=0;k<imgwidth.length;k++){
-    imgwidth[k].style.width=img.clientWidth+'px'
-}
+// for(var k=0;k<imgwidth.length;k++){
+//     imgwidth[k].style.maxWidth=100+'%'
+// }
 for(let x=0;x<2;x++){
     dota[x].addEventListener('click',function(){
         for(var j=0;j<2;j++){
