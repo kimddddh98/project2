@@ -454,12 +454,13 @@ font-family: 'Poppins', sans-serif; */
     
     #con{
         width: 100%;
-        height: 1700px;
+        height: 1800px;
         display: flex;
         flex-direction: column;
         transform: translate(0, 400px);
         transition: 1s ease-out;
         align-items: center;
+        justify-content: space-around;
     }
     #con>div{
         width: 90%;
@@ -1349,6 +1350,9 @@ font-family: 'Poppins', sans-serif; */
         text-align: center;
     
     
+    }
+    .news_text p{
+        height: 65%;
     }
     #news a{
         width: 125px;

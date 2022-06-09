@@ -1,13 +1,10 @@
 $(function(){
-    $('.form').click(function(){
+    $('.detail').click(function(){
         $('#reform').fadeIn();
-        // $('html,body').addClass('hidden')
         });
     $(document).on('click',function(e){
         if($('.small_form,#reform').is(e.target)){
             $('#reform').fadeOut();
-        // $('html,body').removeClass('hidden')
-
         }
     })
     $('.detail:eq(0)').mouseover(function(){
@@ -24,7 +21,6 @@ $(function(){
     })
     $('.detail').mouseleave(function(){
         $('.form').text('Reservation Now')
-
     })
     $('#menu').click(function(){
         $('#clickmenu').css('width','100%')
@@ -44,15 +40,12 @@ $(function(){
         $('#space').fadeOut(500,function(){
         $('#room').slideDown(1000)  
         });    
-    
-
     });
     $('.space_img').hover(function(){
         $(this).children('p').fadeIn();
     },function(){
         $(this).children('p').fadeOut();
     })
-
     $('.space_img').click(function(){
         var popup=($(this).children('img').attr('src'))
         $('#popup_img img').attr('src',popup);
@@ -60,10 +53,7 @@ $(function(){
     })
     $('#popup_img span').click(function(){
         $('#popup_img').fadeOut();
-
     });
-  
-   
 });
 
 window.onload= function(){
