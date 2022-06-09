@@ -3,6 +3,18 @@
 font-family: 'Poppins', sans-serif; */
 /* font-family: 'Nanum Gothic Coding', monospace; */
 @media screen and (max-width:750px){
+    #popup_img{
+        position: fixed;
+        width: 80%;
+        height: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: #fff;
+        border-radius: 5px;
+        border: 10px solid #fff;
+        display: none;
+    }
     .hidden{
         height: 100%;
         min-height: 100%;
@@ -48,11 +60,13 @@ font-family: 'Poppins', sans-serif; */
     }
     .bgbox{
         width: 100%;
-        height: 3900px;
+        /* height: 2050px; */
         display: flex;
+        flex-direction: column;
         align-items: center;
         /* margin: 50px 0; */
         background-color: #f3f4f7;
+        justify-content: space-around;
     }
     #room{
         width: 100%;
@@ -329,8 +343,83 @@ font-family: 'Poppins', sans-serif; */
     select option[value=""][disabled]{
         display: none;
     }
+    #type{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        margin-bottom: 30px;
+    }
+    #type h4{
+        width: 50%;
+        padding: 20px 0px;
+        background-color: #fff;
+        text-align: center;
+        border: 10px solid #fad091;
+        font-family: 'Poppins', sans-serif; 
+        cursor: pointer;
+        color: #444;
+    }
+    #type h4:first-of-type{
+        border-right: none;
+    }
+    .bgbox>p{
+        width: 95%;
+        font-size: 18px;
+        font-family: 'Poppins','Nanum Gothic Coding', sans-serif; 
+        color: #444;
+        font-weight: 300;
+        margin: 30px 0;
+    }
+    
+    #space{
+        width: 100%;
+        display: none;
+        flex-direction: column;
+    }
+    #space>div:not(:last-of-type){
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    #space>div>div{
+        width: 90%;
+        position: relative;
+    }
+    #space img{
+        width: 100%;
+        height: 90%;
+    }
+    #space>div>div>p{
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top:50%;
+        left: 0;
+        transform: translateY(-50%);
+        overflow: hidden;
+        padding: 15px 0;
+        background-color: rgba(250, 208, 145,0.9);
+        color: #fff;
+        font-weight: bold;
+        font-size: 18px;
+        display: none;
+        font-family: 'Poppins','Nanum Gothic Coding', sans-serif; 
+    }
 }
 @media screen and (min-width:751px) and (max-width:1199px){
+    #popup_img{
+        position: fixed;
+        width: 60%;
+        height: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: #fff;
+        border-radius: 5px;
+        border: 10px solid #fff;
+        display: none;
+    }
     .hidden{
         height: 100%;
         min-height: 100%;
@@ -375,12 +464,16 @@ font-family: 'Poppins', sans-serif; */
         
     }
     .bgbox{
+      
         width: 100%;
-        height: 1850px;
+        /* height: 2050px; */
         display: flex;
+        flex-direction: column;
         align-items: center;
         /* margin: 50px 0; */
         background-color: #f3f4f7;
+        justify-content: space-around;
+        
     }
     #room{
         width: 100%;
@@ -659,6 +752,75 @@ font-family: 'Poppins', sans-serif; */
     select option[value=""][disabled]{
         display: none;
     }
+    #type{
+        display: flex;
+        width: 90%;
+        justify-content: space-around;
+        margin-bottom: 30px;
+    }
+    #type h4{
+        width: 50%;
+        padding: 20px 0px;
+        background-color: #fff;
+        text-align: center;
+        border: 10px solid #fad091;
+        font-family: 'Poppins', sans-serif; 
+        cursor: pointer;
+        color: #444;
+
+    
+    
+    
+    }
+    #type h4:first-of-type{
+        border-right: none;
+    }
+    .bgbox>p{
+        width: 90%;
+        font-size: 22px;
+        font-family: 'Poppins','Nanum Gothic Coding', sans-serif; 
+        color: #444;
+        font-weight: 300;
+        margin: 30px 0;
+        
+    }
+    
+    #space{
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+    #space>div:not(:last-of-type){
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+    }
+    #space>div>div{
+        width: 47%;
+        position: relative;
+    }
+    #space img{
+        width: 100%;
+        height: 90%;
+    }
+    #space>div>div>p{
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top:50%;
+        left: 0;
+        transform: translateY(-50%);
+        overflow: hidden;
+        padding: 15px 0;
+        background-color: rgba(250, 208, 145,0.9);
+        color: #fff;
+        font-weight: bold;
+        font-size: 18px;
+        display: none;
+        font-family: 'Poppins','Nanum Gothic Coding', sans-serif; 
+    }
+    
 }
 @media screen and (min-width:1200px){
   
@@ -985,43 +1147,102 @@ font-family: 'Poppins', sans-serif; */
     select option[value=""][disabled]{
         display: none;
     }
+    #type{
+        display: flex;
+        width: 1100px;
+        justify-content: space-around;
+        margin-bottom: 30px;
+    }
+    #type h4{
+        width: 50%;
+        padding: 20px 0px;
+        background-color: #fff;
+        text-align: center;
+        border: 10px solid #fad091;
+        font-family: 'Poppins', sans-serif; 
+        cursor: pointer;
+        color: #444;
+    
+    
+    
+    }
+    #type h4:first-of-type{
+        border-right: none;
+    }
+    .bgbox>p{
+        width: 1100px;
+        font-size: 22px;
+        font-family: 'Poppins','Nanum Gothic Coding', sans-serif; 
+        color: #444;
+        font-weight: 300;
+        margin: 30px 0;
+    }
+    
+    #space{
+        width: 1100px;
+        display: none;
+        flex-direction: column;
+    }
+    #space>div:not(:last-of-type){
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    #space>div>div{
+        width: 47%;
+        position: relative;
+    }
+    #space img{
+        width: 100%;
+        height: 90%;
+    }
+    #space>div>div>p{
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top:50%;
+        left: 0;
+        transform: translateY(-50%);
+        overflow: hidden;
+        padding: 15px 0;
+        background-color: rgba(250, 208, 145,0.9);
+        color: #fff;
+        font-weight: bold;
+        font-size: 18px;
+        display: none;
+        font-family: 'Poppins','Nanum Gothic Coding', sans-serif; 
+    }
+    #popup_img{
+        position: fixed;
+        width: 50%;
+        height: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: #fff;
+        border-radius: 5px;
+        border: 10px solid #fff;
+        display: none;
+    }
 }
-#type{
-    display: flex;
-    width: 1100px;
-    justify-content: space-around;
-    margin-bottom: 30px;
-}
-#type h4{
-    width: 50%;
-    padding: 20px 0px;
-    background-color: #fff;
-    text-align: center;
-    border: 10px solid #fad091;
-    font-family: 'Poppins', sans-serif; 
-    cursor: pointer;
-
-}
-#type h4:first-of-type{
-    border-right: none;
-}
-.bgbox>p{
-    width: 1100px;
-    font-size: 20px;
-    font-family: 'Poppins', sans-serif; 
-    font-weight: 100;
-    margin: 30px 0;
-}
-
-#space{
-    width: 1100px;
-    display: none;
-    flex-direction: column;
-}
-#space>div{
-    width: 100%;
-    display: flex;
-}
-#space img{
-    width: 50%;
-}
+    .space_img{
+        cursor: pointer;
+    }
+    
+    #popup_img img{
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
+    #popup_img span{
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 5px 11px;
+        font-size: 20px;
+        font-weight: bold;
+        background-color: rgba(255, 255, 255,0.5);
+        color: #000;
+        cursor: pointer;
+        border-radius: 5px;
+    }

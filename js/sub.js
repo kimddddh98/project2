@@ -32,23 +32,38 @@ $(function(){
     $('#closemenu').click(function(){
         $('#clickmenu').css('width','0%')
     })
+    
     $('#type h4').eq(1).click(function(){
         $('#room').fadeOut(500,function(){
-        $('.bgbox').css('height','auto')
-        $('#space').slideDown(1000)      
-        $('#space').css('display','flex')      
-        });
+            $('.bgbox').css('height','auto')
+            $('#space').slideDown(1000)      
+            $('#space').css('display','flex')      
+            });
     });
     $('#type h4').eq(0).click(function(){
         $('#space').fadeOut(500,function(){
         $('#room').slideDown(1000)  
-
-            // $('.bgbox').css('height','2050px')
-
         });    
-
+    
 
     });
+    $('.space_img').hover(function(){
+        $(this).children('p').fadeIn();
+    },function(){
+        $(this).children('p').fadeOut();
+    })
+
+    $('.space_img').click(function(){
+        var popup=($(this).children('img').attr('src'))
+        $('#popup_img img').attr('src',popup);
+        $('#popup_img').fadeIn();
+    })
+    $('#popup_img span').click(function(){
+        $('#popup_img').fadeOut();
+
+    });
+  
+   
 });
 
 window.onload= function(){
