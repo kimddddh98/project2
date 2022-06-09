@@ -26,10 +26,10 @@ font-family: 'Poppins', sans-serif; */
         height: 500px;
         background-image: url(../img/sub/sub.jpg);
         background-size: cover;
-        background-position: bottom;
+        background-position: center;
         background-repeat: no-repeat;
         display: flex;
-        background-attachment: fixed;
+        /* background-attachment: fixed; */
         justify-content: center;
         align-items: center;
     }
@@ -431,10 +431,10 @@ font-family: 'Poppins', sans-serif; */
         height: 500px;
         background-image: url(../img/sub/sub.jpg);
         background-size: cover;
-        background-position: bottom;
+        background-position: center;
         background-repeat: no-repeat;
         display: flex;
-        background-attachment: fixed;
+        /* background-attachment: fixed; */
         justify-content: center;
         align-items: center;
     }
@@ -835,10 +835,10 @@ font-family: 'Poppins', sans-serif; */
         height: 500px;
         background-image: url(../img/sub/sub.jpg);
         background-size: cover;
-        background-position: bottom;
+        background-position: center;
         background-repeat: no-repeat;
         display: flex;
-        background-attachment: fixed;
+        /* background-attachment: fixed; */
         justify-content: center;
         align-items: center;
     }
