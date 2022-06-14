@@ -8,12 +8,6 @@ font-family: 'Poppins', sans-serif; */
 
 
 @media screen and (max-width:750px){
-    .hidden{
-        height: 100%;
-        min-height: 100%;
-        overflow: hidden;
-        touch-action: none;
-    }
     #wrap{
         width: 100%;
         height: auto;
@@ -27,6 +21,12 @@ font-family: 'Poppins', sans-serif; */
         justify-content: space-between;
         font-family: 'Poppins', sans-serif;
         color: #000;
+    }
+    .hidden{
+        height: 100%;
+        min-height: 100%;
+        overflow: hidden;
+        touch-action: none;
     }
     #clickmenu{
         width: 0%;
